@@ -1,0 +1,50 @@
+<% var warning = '<!--Don\'t edit this version!-->' %>
+<%=warning%>
+
+<html>
+	<head>
+		<link href="css/style.css" rel="stylesheet">
+		<link rel="icon" href="img/favicon.ico">
+		<title><%=title%></title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="sidebar">
+				<div class="sidebar-container">
+					<h1><%=title%></h1>
+					<nav>
+						<ul id="links">
+							
+							<% 
+								headers.forEach(function(header) {
+							%>
+								<li><a href="#<%=header.id%>"><%=header.text%></a></li>
+							<%
+								})
+							%>
+
+						</ul>
+					</nav>
+
+				</div>
+			</div>
+			<div class="main">
+				<div class="article-wrap">
+					<article class="content">
+						<% sections.forEach(function(section) {%>
+							<%=section%>
+						<%})%>
+					</article>
+				</div>
+				<footer class="site-footer">
+					<p>(c) Owen Scott 2015. Theme is based completely derivatively from the (MIT Licensed) <a href="https://github.com/shashankmehta/greyshade">Greyshade Theme.</a> This page also MIT licensed.</p>
+				</footer>
+
+			</div>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/scrollspy.js"></script>
+		<script src="js/jquery-visible.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

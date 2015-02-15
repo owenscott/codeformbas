@@ -1,62 +1,188 @@
+
+<!--Don't edit this version!-->
+
 <html>
 	<head>
-		<link href="style.css" rel="stylesheet">
-		<title>Title of the Section</title>
+		<link href="css/style.css" rel="stylesheet">
+		<link rel="icon" href="img/favicon.ico">
+		<title>Week 1</title>
 	</head>
 	<body>
 		<div class="container">
 			<div class="sidebar">
 				<div class="sidebar-container">
-					<a href="#">Back</a>
-					<h1>Title of the Section</h1>
-					<ul>
-						<li><a href="#part1">Part 1</a></li>
-						<li><a href="#part2">Part 2</a></li>
-						<li><a href="#part3">Part 3</a></li>
-						<li><a href="#feedback">Feedback</a></li>
-					</ul>
+					<h1>Week 1</h1>
+					<nav>
+						<ul id="links">
+							
+							
+								<li><a href="#intro">Introduction</a></li>
+							
+								<li><a href="#presentation">Presentation</a></li>
+							
+								<li><a href="#html">HTML Basics</a></li>
+							
+								<li><a href="#html-links">Links and Lists</a></li>
+							
+								<li><a href="#exercise1">Exercise 1</a></li>
+							
+								<li><a href="#devtools">Developer Tools</a></li>
+							
+								<li><a href="#exercise2">Exercise 2</a></li>
+							
+								<li><a href="#feedback">Feedback</a></li>
+							
+								<li><a href="#homework">Homework</a></li>
+							
+
+						</ul>
+					</nav>
 
 				</div>
 			</div>
 			<div class="main">
-				<article class="content">
+				<div class="article-wrap">
+					<article class="content">
+						
+							<section id="intro">
+<h1 id="introduction">Introduction</h1>
+<p>Course is about:</p>
+<ul>
+<li>learning how the internet works</li>
+<li>getting some day-to-day insight into what software developers do</li>
+<li>learning the tools you need to <em>learn</em> how to learn software development</li>
+</ul>
 
-					<section id="part1">
-						<h1 id="part1">Part 1 Section Header</h1>
-						<p>Duis mollis porttitor felis eget fringilla. Phasellus aliquam, sapien eget condimentum placerat, nunc mi luctus orci, a mollis nibh lorem vel est. Suspendisse vel luctus quam. Integer nec nisi non ligula malesuada bibendum sed sit amet mi. Quisque ornare convallis nunc id vulputate. Etiam at mi a tellus maximus sollicitudin at vel erat. Aenean non nibh rhoncus, porta metus et, sollicitudin sem. Etiam sed odio aliquet, finibus est ac, ullamcorper erat. Nam libero leo, luctus at nibh id, rhoncus facilisis nisl. Sed nec congue nulla. Duis elit dui, feugiat a interdum et, molestie sit amet ante. Morbi vitae sem ut lectus imperdiet dignissim ut ac ex. Nullam sit amet nisl magna. Vestibulum dapibus dictum augue, at convallis nulla faucibus non. Etiam id fringilla nunc.</p>
+</section>
+						
+							<section id="presentation">
+<h1 id="presentation">Presentation</h1>
+<p>Right now this section is empty. Grab a sandwich. After the lesson I&#39;ll add the presentation so anyone who missed the session can catch up.</p>
 
-						<p>Aliquam eu magna eu ante lobortis ornare eu vel tortor. Praesent mattis nunc arcu, sed ultricies nisl convallis ac. Praesent egestas diam lacinia maximus dapibus. Maecenas sodales accumsan velit, id blandit ante mollis non. Donec mattis sagittis tortor ut dictum. Sed blandit tellus a nunc fringilla aliquet. Vestibulum ornare congue vestibulum. Sed ipsum augue, condimentum id ornare finibus, dapibus vitae orci. Nullam felis lorem, luctus a tortor et, consequat elementum justo. Praesent convallis nisi ut ante imperdiet, et faucibus lorem sollicitudin. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec vulputate nibh vel nibh tristique accumsan. Donec dapibus vulputate massa, id mattis tortor finibus sit amet. Donec vitae eleifend arcu.</p>
+</section>
+						
+							<section id="html">
+<h1 id="html-basics">HTML Basics</h1>
+<p>HTML stands for <a href="http://en.wikipedia.org/wiki/Hypertext &quot;Wikipedia Article on Hypertext">Hypertext Markup Language</a>, but you don&#39;t really need to know that. What you do need to know is that HTML contains all of a webpage&#39;s <em>content</em> (text, images, links, etc.), as well as some of its <em>layout</em> and <em>structure</em>.</p>
+<p>HTML uses <em>tags</em>, which look like this: <code><span class="tag">&lt;article&gt;</span></code>. Every tag must open and close. A closing tag looks like this: <code><span class="tag">&lt;/article&gt;</span></code>. Some basic tags which you should know about are:</p>
+<ul>
+<li><code><span class="tag">&lt;p&gt;</span></code> Used for paragraphs.</li>
+<li><code><span class="tag">&lt;h1&gt;</span></code> Used for headers.</li>
+<li><code><span class="tag">&lt;div&gt;</span></code> Used to block off a section (division) of a webpage.</li>
+<li><code><span class="tag">&lt;a&gt;</span></code> Used for links.</li>
+</ul>
+<p>Content goes between tags like this:</p>
+<p><code><span class="tag">&lt;h1&gt;</span>Section 1<span class="tag">&lt;/h1&gt;</span></code></p>
+<p>Tags can be wrapped inside other tags. A webpage is always wrapped inside an <code><span class="tag">&lt;html&gt;</span></code> tag, which is further divided into two sections: <code><span class="tag">&lt;head&gt;</span></code> and <code><span class="tag">&lt;body&gt;</span></code>. The <code><span class="tag">&lt;head&gt;</span></code> section contains metadata about the webpage. The <code><span class="tag">&lt;body&gt;</span></code> section contains the actual content which is displayed to the user. Here is an example of a complete HTML webpage:</p>
+<pre><code><span class="tag">&lt;html&gt;</span>
 
-						<p>Integer vitae nunc non sem varius sollicitudin nec id nisi. Maecenas vitae imperdiet quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean velit ex, iaculis quis metus ultrices, rutrum gravida erat. Sed ut dolor quis urna tristique pharetra ut vitae sem. Suspendisse potenti. Duis laoreet non orci ut tempor. Sed lobortis non elit feugiat semper. Etiam scelerisque est eget urna pharetra mollis. Aliquam et velit at libero congue mattis. Cras vitae placerat felis, et ornare enim. Mauris vestibulum tellus a elementum facilisis. Ut elementum vitae est quis ultrices. Vestibulum sit amet arcu sit amet est blandit maximus.</p>
+  <span class="tag">&lt;head&gt;</span>
+      <span class="tag">&lt;title&gt;</span>Example Webpage<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;/head&gt;</span>
 
-						<p>In porta euismod ante, non interdum quam convallis id. Sed et eleifend nulla. Duis accumsan justo sit amet quam egestas mattis. Morbi sodales, massa at cursus faucibus, purus felis viverra nibh, eget imperdiet justo orci posuere tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus urna id pellentesque posuere. Ut sollicitudin consectetur tincidunt. Etiam hendrerit convallis nulla et ultrices. Duis dolor elit, vulputate in odio id, vestibulum rutrum libero. Pellentesque eleifend lectus magna. Phasellus et tincidunt enim. Proin ac auctor felis, a ornare dui. Sed eleifend lorem non lacus cursus elementum. Integer cursus magna finibus tempus maximus.</p>
-					</section>
+  <span class="tag">&lt;body&gt;</span>
+      <span class="tag">&lt;h1&gt;</span>The Best Webpage Ever<span class="tag">&lt;/h1&gt;</span>
+      <span class="tag">&lt;p&gt;</span>This is the first paragraph of the best webpage ever. It is amazing.<span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;p&gt;</span>This is the second paragraph of the best webpage ever. It is even more amazing.<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;/body&gt;</span>
 
-					<section id="part2">
-						<h1>Part 2 Section Header</h1>
-						<p>Duis mollis porttitor felis eget fringilla. Phasellus aliquam, sapien eget condimentum placerat, nunc mi luctus orci, a mollis nibh lorem vel est. Suspendisse vel luctus quam. Integer nec nisi non ligula malesuada bibendum sed sit amet mi. Quisque ornare convallis nunc id vulputate. Etiam at mi a tellus maximus sollicitudin at vel erat. Aenean non nibh rhoncus, porta metus et, sollicitudin sem. Etiam sed odio aliquet, finibus est ac, ullamcorper erat. Nam libero leo, luctus at nibh id, rhoncus facilisis nisl. Sed nec congue nulla. Duis elit dui, feugiat a interdum et, molestie sit amet ante. Morbi vitae sem ut lectus imperdiet dignissim ut ac ex. Nullam sit amet nisl magna. Vestibulum dapibus dictum augue, at convallis nulla faucibus non. Etiam id fringilla nunc.</p>
+<span class="tag">&lt;/html&gt;</span>
+</code></pre><p>Notice the use of <strong>line breaks</strong> and <strong>tab spaces</strong> to keep the HTML clean and readable. <a href="examples/best.html" title="Link to the Best Webpage Ever">In a web browser</a> this webpage would look like:</p>
+<p><a href="img/firefox.png"><img src="img/firefox.png" alt="A picture of the browser with the simple HTML webpage." title="The best webpage ever"></a></p>
+<p>Looking at the webpage we can already notice a few things. First, the text contained in the <code><span class="tag">&lt;h1&gt;</span></code> tag is given a different style than the text contained in the <code><span class="tag">&lt;p&gt;</span></code> tags. This is because the <code><span class="tag">&lt;h1&gt;</span></code> tag represents a header while the <code><span class="tag">&lt;p&gt;</span></code> tags represent paragraphs. Second, as you might expect, the browser has automatically inserted spaces between the header and the paragraphs.</p>
+<p>Later in the course we will look at how you can change the style of the HTML displayed in the browser to make it more visually appealing. For this first week though we are going to deal with simple HTML pages like the one above.</p>
 
-						<p>Aliquam eu magna eu ante lobortis ornare eu vel tortor. Praesent mattis nunc arcu, sed ultricies nisl convallis ac. Praesent egestas diam lacinia maximus dapibus. Maecenas sodales accumsan velit, id blandit ante mollis non. Donec mattis sagittis tortor ut dictum. Sed blandit tellus a nunc fringilla aliquet. Vestibulum ornare congue vestibulum. Sed ipsum augue, condimentum id ornare finibus, dapibus vitae orci. Nullam felis lorem, luctus a tortor et, consequat elementum justo. Praesent convallis nisi ut ante imperdiet, et faucibus lorem sollicitudin. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec vulputate nibh vel nibh tristique accumsan. Donec dapibus vulputate massa, id mattis tortor finibus sit amet. Donec vitae eleifend arcu.</p>
+</section>
+						
+							<section id="html-links">
+<h1 id="links-and-lists">Links and Lists</h1>
+<p>We have already looked at simple HTML documents using simple elements, such as the header (<code><span class="tag">&lt;h1&gt;</span></code>) and the paragraph (<code><span class="tag">&lt;p&gt;</span></code>). Now we are going to look at a more complicated element, the link.</p>
+<h2 id="the-link">The Link</h2>
+<p>Links are done in HTML using the <code><span class="tag">&lt;a&gt;</span></code> tag. An example of a simple link is:</p>
+<p><code>&lt;a href=&quot;http://www.google.com/&quot;&gt;Google Homepage<span class="tag">&lt;/a&gt;</span></code></p>
+<p>Notice that now there is content between the opening <code><span class="tag">&lt;a</code> and closing <code>&gt;</span></code> of the opening tag. This content, <code>href=&quot;http://www.google.com/&quot;</code>, provides the actual URL (or <em>Hypertext Reference</em>, i.e. HREF) for the link. <a href="examples/link.html">In a browser</a> this HTML tag would appear as follows:</p>
+<p><a href="img/link.png"><img src="img/link.png" alt="A link tag in the browser" title="Link Tag"></a></p>
+<h2 id="the-list">The List</h2>
+<p>Another useful HTML element is the list. Lists use two elements: <code><span class="tag">&lt;ul&gt;</span></code> (<em>unordered list</em>) to represent the list itself, and <code><span class="tag">&lt;li&gt;</span></code> to represent each item on the list. A simple example of a list is as follows:</p>
+<pre><code><span class="tag">&lt;ul&gt;</span>
+  <span class="tag">&lt;li&gt;</span>Item 1<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>Item 2<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>Item 3<span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span>
+</code></pre><p>Again note the use of indenting for code clarity. <a href="examples/list.html">In a browser</a> this list would appear as follows:</p>
+<p><a href="img/list.png"><img src="img/list.png" alt="A list tag in the browser" title="List Tag"></a></p>
+<h2 id="all-together-now">All Together Now</h2>
+<p>Let&#39;s now combine lists and links, as well as the <code><span class="tag">&lt;html&gt;</span></code>, <code><span class="tag">&lt;head&gt;</span></code>, and <code><span class="tag">&lt;body&gt;</span></code> tags, to make a complete webpage.</p>
+<pre><code><span class="tag">&lt;html&gt;</span>
 
-						<p>Integer vitae nunc non sem varius sollicitudin nec id nisi. Maecenas vitae imperdiet quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean velit ex, iaculis quis metus ultrices, rutrum gravida erat. Sed ut dolor quis urna tristique pharetra ut vitae sem. Suspendisse potenti. Duis laoreet non orci ut tempor. Sed lobortis non elit feugiat semper. Etiam scelerisque est eget urna pharetra mollis. Aliquam et velit at libero congue mattis. Cras vitae placerat felis, et ornare enim. Mauris vestibulum tellus a elementum facilisis. Ut elementum vitae est quis ultrices. Vestibulum sit amet arcu sit amet est blandit maximus.</p>
-					</section>
+  <span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;title&gt;</span>MBA Programs in Europe<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;/head&gt;</span>
 
-					<section id="part3">
-						<h1>Part 3 Section Header</h1>
-						<p>Duis mollis porttitor felis eget fringilla. Phasellus aliquam, sapien eget condimentum placerat, nunc mi luctus orci, a mollis nibh lorem vel est. Suspendisse vel luctus quam. Integer nec nisi non ligula malesuada bibendum sed sit amet mi. Quisque ornare convallis nunc id vulputate. Etiam at mi a tellus maximus sollicitudin at vel erat. Aenean non nibh rhoncus, porta metus et, sollicitudin sem. Etiam sed odio aliquet, finibus est ac, ullamcorper erat. Nam libero leo, luctus at nibh id, rhoncus facilisis nisl. Sed nec congue nulla. Duis elit dui, feugiat a interdum et, molestie sit amet ante. Morbi vitae sem ut lectus imperdiet dignissim ut ac ex. Nullam sit amet nisl magna. Vestibulum dapibus dictum augue, at convallis nulla faucibus non. Etiam id fringilla nunc.</p>
+  <span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>A Selection of European MBA Programs<span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;ul&gt;</span>
+      <span class="tag">&lt;li&gt;</span>&lt;a href=&quot;http://www.sbs.ox.ac.uk/&quot;&gt;Said Business School<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+      <span class="tag">&lt;li&gt;</span>&lt;a href=&quot;http://www.insead.edu/home/&quot;&gt;Insead<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+      <span class="tag">&lt;li&gt;</span>&lt;a href=&quot;http://www.hec.edu/&quot;&gt;HEC Paris<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+      <span class="tag">&lt;li&gt;</span>&lt;a href=&quot;http://www.esade.edu/web/eng&quot;&gt;ESADE<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;/ul&gt;</span>
+  <span class="tag">&lt;/body&gt;</span>
 
-						<p>Aliquam eu magna eu ante lobortis ornare eu vel tortor. Praesent mattis nunc arcu, sed ultricies nisl convallis ac. Praesent egestas diam lacinia maximus dapibus. Maecenas sodales accumsan velit, id blandit ante mollis non. Donec mattis sagittis tortor ut dictum. Sed blandit tellus a nunc fringilla aliquet. Vestibulum ornare congue vestibulum. Sed ipsum augue, condimentum id ornare finibus, dapibus vitae orci. Nullam felis lorem, luctus a tortor et, consequat elementum justo. Praesent convallis nisi ut ante imperdiet, et faucibus lorem sollicitudin. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec vulputate nibh vel nibh tristique accumsan. Donec dapibus vulputate massa, id mattis tortor finibus sit amet. Donec vitae eleifend arcu.</p>
-					</section>
+<span class="tag">&lt;/html&gt;</span>
+</code></pre><p><a href="examples/bschools.html">In the browser</a>, this webpage will look as follows:</p>
+<p><a href="img/bschools.png"><img src="img/bschools.png" alt="Business Schools in Europe" title="Business Schools in Europe"></a></p>
 
-					<section id="feedback">
-						<h1>Feedback</h1>
-						<iframe src="https://docs.google.com/forms/d/1A-OM-bi9mauep5uoxMNnY330YQYDgFBdxFOYayJGcXY/viewform?embedded=true#start=embed" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-					</section>
-				</article>
-				<footer>
-					<p>(c) Owen Scott 2015. Theme is hacked together CSS based completely derivatively from the (MIT Licensed) <a href="https://github.com/shashankmehta/greyshade">Greyshade Theme</a></p>
+</section>
+						
+							<section id="exercise1">
+<h1 id="exercise-1">Exercise 1</h1>
+<p>Make your own webpage.</p>
+
+</section>
+						
+							<section id="devtools">
+<h1 id="developer-tools">Developer Tools</h1>
+<p>Exercise 1.
+Exercise 2.
+Exercise 3.</p>
+
+</section>
+						
+							<section id="exercise2">
+<h1 id="exercise-2">Exercise 2</h1>
+<p>Somethign with Dev Tools</p>
+
+</section>
+						
+							<section id="feedback">
+<h1 id="feedback">Feedback</h1>
+<p>Every week it would be fantastic to get some anonymous feedback to help make this course better. If you have a moment, please put something in here and press submit!</p>
+<iframe src="https://docs.google.com/forms/d/1A-OM-bi9mauep5uoxMNnY330YQYDgFBdxFOYayJGcXY/viewform?embedded=true#start=embed" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+</section>
+						
+							<section id="homework">
+<h1 id="homework">Homework</h1>
+<h2 id="essential">Essential</h2>
+<p>General Assembly dash HTML</p>
+<h2 id="bonus">Bonus</h2>
+<p>For the serious, some extra resources (about another hour). Two tracks: learn to code, learn to manage.</p>
+<p>Dynamic vs. static webpages.</p>
+
+</section>
+						
+					</article>
+				</div>
+				<footer class="site-footer">
+					<p>(c) Owen Scott 2015. Theme is based completely derivatively from the (MIT Licensed) <a href="https://github.com/shashankmehta/greyshade">Greyshade Theme.</a> This page also MIT licensed.</p>
 				</footer>
+
 			</div>
 		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/scrollspy.js"></script>
+		<script src="js/jquery-visible.min.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>
