@@ -1,5 +1,5 @@
 # Exercise 1
-For our first exercise we will make a very simple webpage, building on the example in the previous sections. First pick a list of something (favourite bands, top news websites, best mushroom quiche recipes, etc.) and make a website listing some links. When you're done, your webpage should look like [this one](examples/bschools.html). (Don't worry, we will make cooler websites before this course is over!)
+For our first exercise we will make a very simple webpage, building on the example in the previous sections. First pick a list of something (favourite bands, top news websites, best mushroom quiche recipes, etc.) and make a website listing some links. When you're done, your webpage should look like the one in the following image. (Don't worry, we will make cooler websites before this course is over!)
 
 [![Business Schools in Europe](img/bschools.png "Business Schools in Europe")](examples/bschools.html)
 
