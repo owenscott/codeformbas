@@ -1,6 +1,6 @@
 # Introduction
 Welcome to your first coding course at the Said Business School! This set of classes offers a few things:
-* a change to see how the internet works
+* a chance to see how the internet works
 * an opportunity to get some day-to-day insight into software management from a developer's perspective
 * exposure to the tools you need to *learn* how to learn software development
 

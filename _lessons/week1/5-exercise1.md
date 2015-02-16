@@ -9,4 +9,4 @@ To start, make a folder on your computer named `MBA_Coding_Course` and then crea
 
 [![Sublime Text](img/sublime.png "Sublime Text")](img/sublime.png)
 
-Now create an HTML webpage in the index.html file, using the notes in the previous two sections as examples. When you are done, save the file in Sublime Text and double click on it in Finder / Windows Explorer. It should open automatically in your default browser. 
+Now create an HTML webpage in the `index.html` file, using the notes in the previous two sections as examples. When you are done, save the file in Sublime Text and double click on it in Finder / Windows Explorer. It should open automatically in your default browser. 
