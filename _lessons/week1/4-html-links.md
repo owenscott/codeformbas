@@ -10,7 +10,7 @@ Links are done in HTML using the `<a>` tag. An example of a simple link is:
 
 Notice that now there is content between the opening `<a` and closing `>` of the opening tag. This content, `href="http://www.google.com/"`, provides the actual URL (or *Hypertext Reference*, i.e. HREF) for the link. [In a browser](examples/link.html) this HTML tag would appear as follows:
 
-[![A link tag in the browser](img/link.png "Link Tag")](img/link.png)
+[![A link tag in the browser](img/link.png "Link Tag")](examples/link.html)
 
 ## The List
 
@@ -24,7 +24,7 @@ Another useful HTML element is the list. Lists use two elements: `<ul>` (*unorde
 
 Again note the use of indenting for code clarity. [In a browser](examples/list.html) this list would appear as follows:
 
-[![A list tag in the browser](img/list.png "List Tag")](img/list.png)
+[![A list tag in the browser](img/list.png "List Tag")](examples/list.html)
 
 ## All Together Now
 
@@ -50,4 +50,4 @@ Let's now combine lists and links, as well as the `<html>`, `<head>`, and `<body
 
 [In the browser](examples/bschools.html), this webpage will look as follows:
 
-[![Business Schools in Europe](img/bschools.png "Business Schools in Europe")](img/bschools.png)
+[![Business Schools in Europe](img/bschools.png "Business Schools in Europe")](examples/bschools.html)

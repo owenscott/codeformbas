@@ -31,7 +31,7 @@ Tags can be wrapped inside other tags. A webpage is always wrapped inside an `<h
 
 Notice the use of **line breaks** and **tab spaces** to keep the HTML clean and readable. [In a web browser](examples/best.html "Link to the Best Webpage Ever") this webpage would look like:
 
-[![A picture of the browser with the simple HTML webpage.](img/firefox.png "The best webpage ever")](img/firefox.png)
+[![A picture of the browser with the simple HTML webpage.](img/firefox.png "The best webpage ever")](examples/best.html)
 
 Looking at the webpage we can already notice a few things. First, the text contained in the `<h1>` tag is given a different style than the text contained in the `<p>` tags. This is because the `<h1>` tag represents a header while the `<p>` tags represent paragraphs. Second, as you might expect, the browser has automatically inserted spaces between the header and the paragraphs.
 
