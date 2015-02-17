@@ -48,8 +48,7 @@
 }
 
 
-
-/*@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
     .sidebar {
     	display: none;
     }
@@ -57,15 +56,30 @@
     .main {
     	width: 100%;
     	position: relative;
+    	margin-left: 0px;
     }
+
+    .content {
+    	padding: 1em 1.5em;
+    }
+
 }
-*/
+
 
 /* ARTICLE AND SECTIONS */
 
 
-.content section {
-	display: none;
+@media	screen and (min-width: 600px) {
+	.content section {
+		display: none;
+	}	
+}
+
+@media screen and (max-width: 600px) {
+	#feedback {
+		display: none;
+	}
+
 }
 
 .content section.active {

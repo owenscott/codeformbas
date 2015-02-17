@@ -6,7 +6,7 @@ We have already looked at simple HTML documents using simple elements, such as t
 
 Links are done in HTML using the `<a>` tag. An example of a simple link is:
 
-`<a href="http://www.google.com/">Google Homepage</a>`
+    <a href="http://www.google.com/">Google Homepage</a>
 
 Notice that now there is content between the opening `<a` and closing `>` of the opening tag. This content, `href="http://www.google.com/"`, provides the actual URL (or *Hypertext Reference*, i.e. HREF) for the link. [In a browser](examples/link.html) this HTML tag would appear as follows:
 
