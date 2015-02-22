@@ -7,6 +7,9 @@ var makeSectionActive = function(selector) {
 $(document).ready(function(){
 	
 	var pageLink = window.location.href.split('/').slice(-1)[0];
+	// get only what's left of the #
+	pageLink = pageLink.slice(pageLink.indexOf('#'), pageLink.length);
+
 	console.log(pageLink);
 
 	if (pageLink) {

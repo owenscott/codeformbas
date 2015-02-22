@@ -1,29 +1,25 @@
-<% var warning = '<!--Don\'t edit this version!-->' %>
-<%=warning%>
+
+<!--Don't edit this version!-->
 
 <html>
 	<head>
 		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 		<link href="../../css/style.css" rel="stylesheet">
 		<link rel="icon" href="../../img/favicon.ico">
-		<title>CodeForMBAs - <%=title%></title>
+		<title>CodeForMBAs - Week 2</title>
 	</head>
 	<body>
 		<div class="container">
 			<div class="sidebar">
 				<div class="sidebar-container">
 					<a class="link-home" href="../..">CodeForMBAs</a>
-					<h1><%=title%></h1>
+					<h1>Week 2</h1>
 					<nav>
 						<ul id="links">
 							
-							<% 
-								headers.forEach(function(header) {
-							%>
-								<li><a href="#<%=header.id%>"><%=header.text%></a></li>
-							<%
-								})
-							%>
+							
+								<li><a href="#intro">Introduction</a></li>
+							
 
 						</ul>
 					</nav>
@@ -33,9 +29,13 @@
 			<div class="main">
 				<div class="article-wrap">
 					<article class="content">
-						<% sections.forEach(function(section) {%>
-							<%=section%>
-						<%})%>
+						
+							<section id="intro">
+<h1 id="introduction">Introduction</h1>
+<p>Welcome to the second week of the course!</p>
+
+</section>
+						
 					</article>
 				</div>
 			<!-- 	<footer class="site-footer">

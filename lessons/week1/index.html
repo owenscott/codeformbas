@@ -1,0 +1,202 @@
+
+<!--Don't edit this version!-->
+
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<link href="../../css/style.css" rel="stylesheet">
+		<link rel="icon" href="../../img/favicon.ico">
+		<title>CodeForMBAs - Week 1</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="sidebar">
+				<div class="sidebar-container">
+					<a class="link-home" href="../..">CodeForMBAs</a>
+					<h1>Week 1</h1>
+					<nav>
+						<ul id="links">
+							
+							
+								<li><a href="#intro">Introduction</a></li>
+							
+								<li><a href="#html">HTML Basics</a></li>
+							
+								<li><a href="#html-links">Links and Lists</a></li>
+							
+								<li><a href="#exercise1">Exercise 1</a></li>
+							
+								<li><a href="#devtools">Developer Tools</a></li>
+							
+								<li><a href="#exercise2">Exercise 2</a></li>
+							
+								<li><a href="#feedback">Feedback</a></li>
+							
+								<li><a href="#homework">Homework</a></li>
+							
+
+						</ul>
+					</nav>
+
+				</div>
+			</div>
+			<div class="main">
+				<div class="article-wrap">
+					<article class="content">
+						
+							<section id="intro">
+<h1 id="introduction">Introduction</h1>
+<p>Welcome to your first coding course at the Said Business School! This set of classes offers a few things:</p>
+<ul>
+<li>a chance to see how the internet works</li>
+<li>an opportunity to get some day-to-day insight into software management from a developer&#39;s perspective</li>
+<li>exposure to the tools you need to <em>learn</em> how to learn software development</li>
+</ul>
+<p>Every week we will have a 50 minute session and about 60 minutes of homework. The sessions are largely self-paced, so if you can&#39;t finish in class, then you can use the material on this website to finish on your own. </p>
+<p>For the course we will be using the <a href="http://www.google.com/chrome/" title="Google Chrome Download Page">Google Chrome</a> browser and <a href="http://www.sublimetext.com/" title="Sublime Text Download Page">Sublime Text</a> text editor. If you haven&#39;t downloaded and installed these programs please do so now.</p>
+
+</section>
+						
+							<section id="html">
+<h1 id="html-basics">HTML Basics</h1>
+<p>HTML stands for <a href="http://en.wikipedia.org/wiki/Hypertext &quot;Wikipedia Article on Hypertext">Hypertext Markup Language</a>, but you don&#39;t really need to know that. What you do need to know is that HTML contains all of a webpage&#39;s <em>content</em> (text, images, links, etc.), as well as some of its <em>layout</em> and <em>structure</em>.</p>
+<p>HTML uses <em>tags</em>, which look like this: <code><span class="tag">&lt;article&gt;</span></code>. Every tag must open and close. A closing tag looks like this: <code><span class="tag">&lt;/article&gt;</span></code>. Some basic tags which you should know about are:</p>
+<ul>
+<li><code><span class="tag">&lt;p&gt;</span></code> Used for paragraphs.</li>
+<li><code><span class="tag">&lt;h1&gt;</span></code> Used for headers.</li>
+<li><code><span class="tag">&lt;div&gt;</span></code> Used to block off a section (division) of a webpage.</li>
+<li><code><span class="tag">&lt;a&gt;</span></code> Used for links.</li>
+</ul>
+<p>Content goes between tags like this:</p>
+<p><code><span class="tag">&lt;h1&gt;</span>Section 1<span class="tag">&lt;/h1&gt;</span></code></p>
+<p>Tags can be wrapped inside other tags. A webpage is always wrapped inside an <code><span class="tag">&lt;html&gt;</span></code> tag, which is further divided into two sections: <code><span class="tag">&lt;head&gt;</span></code> and <code><span class="tag">&lt;body&gt;</span></code>. The <code><span class="tag">&lt;head&gt;</span></code> section contains metadata about the webpage. The <code><span class="tag">&lt;body&gt;</span></code> section contains the actual content which is displayed to the user. Here is an example of a complete HTML webpage:</p>
+<pre><code><span class="tag">&lt;html&gt;</span>
+
+  <span class="tag">&lt;head&gt;</span>
+      <span class="tag">&lt;title&gt;</span>Example Webpage<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;/head&gt;</span>
+
+  <span class="tag">&lt;body&gt;</span>
+      <span class="tag">&lt;h1&gt;</span>The Best Webpage Ever<span class="tag">&lt;/h1&gt;</span>
+      <span class="tag">&lt;p&gt;</span>This is the first paragraph of the best webpage ever. It is amazing.<span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;p&gt;</span>This is the second paragraph of the best webpage ever. It is even more amazing.<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;/body&gt;</span>
+
+<span class="tag">&lt;/html&gt;</span>
+</code></pre><p>Notice the use of <strong>line breaks</strong> and <strong>tab spaces</strong> to keep the HTML clean and readable. <a href="examples/best.html" title="Link to the Best Webpage Ever">In a web browser</a> this webpage would look like:</p>
+<p><a href="examples/best.html"><img src="img/firefox.png" alt="A picture of the browser with the simple HTML webpage." title="The best webpage ever"></a></p>
+<p>Looking at the webpage we can already notice a few things. First, the text contained in the <code><span class="tag">&lt;h1&gt;</span></code> tag is given a different style than the text contained in the <code><span class="tag">&lt;p&gt;</span></code> tags. This is because the <code><span class="tag">&lt;h1&gt;</span></code> tag represents a header while the <code><span class="tag">&lt;p&gt;</span></code> tags represent paragraphs. Second, as you might expect, the browser has automatically inserted spaces between the header and the paragraphs.</p>
+<p>Later in the course we will look at how you can change the style of the HTML displayed in the browser to make it more visually appealing. For this first week though we are going to deal with simple HTML pages like the one above.</p>
+
+</section>
+						
+							<section id="html-links">
+<h1 id="links-and-lists">Links and Lists</h1>
+<p>We have already looked at simple HTML documents using simple elements, such as the header (<code><span class="tag">&lt;h1&gt;</span></code>) and the paragraph (<code><span class="tag">&lt;p&gt;</span></code>). Now we are going to look at a more complicated element, the link.</p>
+<h2 id="the-link">The Link</h2>
+<p>Links are done in HTML using the <code><span class="tag">&lt;a&gt;</span></code> tag. An example of a simple link is:</p>
+<pre><code>&lt;a href=&quot;http://www.google.com/&quot;&gt;Google Homepage<span class="tag">&lt;/a&gt;</span>
+</code></pre><p>Notice that now there is content between the opening <code><span class="tag">&lt;a</code> and closing <code>&gt;</span></code> of the opening tag. This content, <code>href=&quot;http://www.google.com/&quot;</code>, provides the actual URL (or <em>Hypertext Reference</em>, i.e. HREF) for the link. <a href="examples/link.html">In a browser</a> this HTML tag would appear as follows:</p>
+<p><a href="examples/link.html"><img src="img/link.png" alt="A link tag in the browser" title="Link Tag"></a></p>
+<h2 id="the-list">The List</h2>
+<p>Another useful HTML element is the list. Lists use two elements: <code><span class="tag">&lt;ul&gt;</span></code> (<em>unordered list</em>) to represent the list itself, and <code><span class="tag">&lt;li&gt;</span></code> to represent each item on the list. A simple example of a list is as follows:</p>
+<pre><code><span class="tag">&lt;ul&gt;</span>
+  <span class="tag">&lt;li&gt;</span>Item 1<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>Item 2<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>Item 3<span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span>
+</code></pre><p>Again note the use of indenting for code clarity. <a href="examples/list.html">In a browser</a> this list would appear as follows:</p>
+<p><a href="examples/list.html"><img src="img/list.png" alt="A list tag in the browser" title="List Tag"></a></p>
+<h2 id="all-together-now">All Together Now</h2>
+<p>Let&#39;s now combine lists and links, as well as the <code><span class="tag">&lt;html&gt;</span></code>, <code><span class="tag">&lt;head&gt;</span></code>, and <code><span class="tag">&lt;body&gt;</span></code> tags, to make a complete webpage.</p>
+<pre><code><span class="tag">&lt;html&gt;</span>
+
+  <span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;title&gt;</span>MBA Programs in Europe<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;/head&gt;</span>
+
+  <span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>A Selection of European MBA Programs<span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;ul&gt;</span>
+      <span class="tag">&lt;li&gt;</span>&lt;a href=&quot;http://www.sbs.ox.ac.uk/&quot;&gt;Said Business School<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+      <span class="tag">&lt;li&gt;</span>&lt;a href=&quot;http://www.insead.edu/home/&quot;&gt;Insead<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+      <span class="tag">&lt;li&gt;</span>&lt;a href=&quot;http://www.hec.edu/&quot;&gt;HEC Paris<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+      <span class="tag">&lt;li&gt;</span>&lt;a href=&quot;http://www.esade.edu/web/eng&quot;&gt;ESADE<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;/ul&gt;</span>
+  <span class="tag">&lt;/body&gt;</span>
+
+<span class="tag">&lt;/html&gt;</span>
+</code></pre><p><a href="examples/bschools.html">In the browser</a>, this webpage will look as follows:</p>
+<p><a href="examples/bschools.html"><img src="img/bschools.png" alt="Business Schools in Europe" title="Business Schools in Europe"></a></p>
+
+</section>
+						
+							<section id="exercise1">
+<h1 id="exercise-1">Exercise 1</h1>
+<p>For our first exercise we will make a very simple webpage, building on the example in the previous sections. First pick a list of something (favourite bands, top news websites, best mushroom quiche recipes, etc.) and make a website listing some links. When you&#39;re done, your webpage should look like the one in the following image. (Don&#39;t worry, we will make cooler websites before this course is over!)</p>
+<p><a href="examples/bschools.html"><img src="img/bschools.png" alt="Business Schools in Europe" title="Business Schools in Europe"></a></p>
+<p>To start, make a folder on your computer named <code>MBA_Coding_Course</code> and then create another folder within it named <code>week1_site</code>. Now open Sublime Text and create a file called <code>index.html</code> inside the <code>week1_site</code> folder.</p>
+<p><a href="img/folder.png"><img src="img/folder.png" alt="index.html" title="index.html in your course folder"></a></p>
+<p><a href="img/sublime.png"><img src="img/sublime.png" alt="Sublime Text" title="Sublime Text"></a></p>
+<p>Now create an HTML webpage in the <code>index.html</code> file, using the notes in the previous two sections as examples. When you are done, save the file in Sublime Text and double click on it in Finder / Windows Explorer. It should open automatically in your default browser. </p>
+
+</section>
+						
+							<section id="devtools">
+<h1 id="developer-tools">Developer Tools</h1>
+<p>Developer Tools are a fantastic way to explore and debug live websites, as well as test modifications. You can use them for debugging your own work, or for making quick suggestions/tests on a product someone is developing for you.</p>
+<p>To open developer tools in Google Chrome, press <code>ctrl-shift-i</code> on Windows or <code>alt-command-i</code> on Mac. You should see a window like this one appear in your browser:</p>
+<p><a href="img/devtools1.png"><img src="img/devtools1.png" alt="Developer Tools" title="Developer Tools"></a></p>
+<p>You&#39;ll see that the developer tools console has a number of tabs. For today, we will focus on the <em>Elements</em> tab, which allows us to examine the HTML for any website on the internet.</p>
+<p><a href="img/devtools2.png"><img src="img/devtools2.png" alt="Developer Tools Tabs" title="Developer Tools Tabs"></a></p>
+<p>Using the elements tab, we can explore the HTML on a webpage directly. Clicking on a particular HTML element will highlight that element on our webpage (in blue).</p>
+<p><a href="img/devtools3.png"><img src="img/devtools3.png" alt="Highlighting an element" title="Highlighting an Element"></a></p>
+<p>By double clicking on an element, you can also change the contents of HTML tags.</p>
+<p><a href="img/devtools4.png"><img src="img/devtools4.png" alt="Changing HTML" title="Changing HTML"></a></p>
+<p>Throughout this course, we will use developer tools to explore how you can inspect live websites and try out small changes. This can be extremely useful when you&#39;re working on your own sites, or when you&#39;re managing the development of a site which someone else is working on.</p>
+
+</section>
+						
+							<section id="exercise2">
+<h1 id="exercise-2">Exercise 2</h1>
+<h2 id="part-1">Part 1</h2>
+<p>To start, go back to the website which you made in <em>Exercise 1</em> and open up the developer tools console. (Remember, <code>ctrl-shift-i</code> on Windows or <code>alt-cmd-i</code> on Mac). Now go to the <em>Elements</em> tab and take a look at the HTML. Prototype 1-2 small changes to your website by double clicking on the HTML elements and editing their contents.</p>
+<h2 id="part-2">Part 2</h2>
+<p>Now you&#39;re ready to try out developer tools on some HTML in the wild. Be forewarned though - HTML on full-featured websites can be much more complicated than what you&#39;ve been dealing with today.</p>
+<p>For your first foray, visit the <a href="http://www.jbs.cam.ac.uk/programmes/mba/" title="Cambridge MBA Website">website for the Cambridge MBA Program</a>. Open up developer tools and have a look around. Once you&#39;re feeling comfortable with the layout, try defacing the website slightly in a hilarious (but tasteful) manner.</p>
+<p>Great, you&#39;re done for today!</p>
+
+</section>
+						
+							<section id="feedback">
+<h1 id="feedback">Feedback</h1>
+<p>Every week it would be fantastic to get some anonymous feedback to help make this course better. If you have a moment, please put something in here and press submit!</p>
+<iframe src="https://docs.google.com/forms/d/1A-OM-bi9mauep5uoxMNnY330YQYDgFBdxFOYayJGcXY/viewform?embedded=true#start=embed" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+</section>
+						
+							<section id="homework">
+<h1 id="homework">Homework</h1>
+<p>For this first week we are going to focus simply on getting our HTML chops up. This practice is essential - once we have a solid foundation with the basic technologies we can build into much more exciting things. Luckily, great resources exist to help you practice!</p>
+<h2 id="essential">Essential</h2>
+<p>Create an account on <a href="https://dash.generalassemb.ly/" title="General Assembly Dash">General Assembly Dash</a> and try out <em>Project 1: Build a Personal Website</em>. This should take about 30 minutes and provides great practice.</p>
+<h2 id="bonus">Bonus</h2>
+<p>Repetition, repetition, repetition. Nothing is more important. If you&#39;ve got some time to hack on this stuff, also consider trying out <a href="https://www.codeschool.com/courses/front-end-foundations" title="Code School Intro Course">Codeschool&#39;s Free intro to HTML and CSS</a>. Their videos and courses are top notch, and they tackle things are a <em>bit</em> more of an advanced pace than we have so far (while still remaining accessible). </p>
+<p>Otherwise, now is a great time to start working on a personal website or project. Maybe something for your EP or for an event that you&#39;re organizing. This is the number one thing you can do if you want to maximize the value that you get from this course. Feel free to email me if you have any questions!</p>
+
+</section>
+						
+					</article>
+				</div>
+			<!-- 	<footer class="site-footer">
+					<p>(c) Owen Scott 2015. Theme is based completely derivatively from the (MIT Licensed) <a href="https://github.com/shashankmehta/greyshade">Greyshade Theme.</a> This page also MIT licensed.</p>
+				</footer>
+ -->
+			</div>
+		</div>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/scrollspy.js"></script>
+		<script src="../../js/jquery-visible.min.js"></script>
+		<script src="../../js/main.js"></script>
+	</body>
+</html>

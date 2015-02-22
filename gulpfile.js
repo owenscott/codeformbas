@@ -16,14 +16,21 @@ gulp.task('listen', function() {
 })
 
 gulp.task('build', function() {
-	var outputHeaders = []
 
 	var lessons = fs.readdirSync('./_lessons'),
-			template = _.template(fs.readFileSync('./_templates/main.ejs').toString()),
-			contents = [];
+			template = _.template(fs.readFileSync('./_templates/main.ejs').toString());
 
+	// iterate through all of the lesson directories
 	lessons.forEach(function(lessonDir) {
+		
+
+		var contents = [],
+				outputHeaders = [];
 		var sections = fs.readdirSync(path.join('./_lessons', lessonDir));
+
+		var title = lessonDir.slice(0,1).toUpperCase() +  lessonDir.slice(1, lessonDir.indexOf(/[0-9]/)) + ' ' +  lessonDir.slice(lessonDir.indexOf(/[0-9]/), lessonDir.length);
+
+		// iterate through all of the sections in each directory and create an HTML page		
 		sections.forEach(function(sectionFile) {
 			var fileContents = fs.readFileSync(path.join('./_lessons', lessonDir, sectionFile)).toString();
 			var sectionMarkup = marked(fileContents);
@@ -42,16 +49,36 @@ gulp.task('build', function() {
 				})
 			}
 		})
+
+		var output = template({
+			sections: contents,
+			headers: outputHeaders,
+			title: title
+		});
+
+		// create folders as needed
+		if (!fs.existsSync('lessons')) {
+			fs.mkdirSync('lessons');
+		}
+		if (!fs.existsSync(path.join('lessons', lessonDir))) {
+			fs.mkdirSync(path.join('lessons', lessonDir));			
+		}
+		// write contents into folder
+		fs.writeFileSync(path.join('lessons',lessonDir, 'index.html'), output);
+	
+		// move images into folder as needed
+		if (fs.existsSync(path.join('img', lessonDir))) {
+			gulp.src(path.join('img', lessonDir, '*.png')).pipe(gulp.dest(path.join('lessons', lessonDir, 'img')))
+		}
+		// move examples into folder as needed
+		if (fs.existsSync(path.join('examples', lessonDir))) {
+			gulp.src(path.join('examples', lessonDir, '*.html')).pipe(gulp.dest(path.join('lessons', lessonDir, 'examples')))
+		}
+
 	})
 
 
-	var output = template({
-		sections: contents,
-		headers: outputHeaders,
-		title: 'Week 1'
-	});
 
-	fs.writeFileSync('index.html', output)	
 })
 
 gulp.task('default', ['build', 'listen']);
