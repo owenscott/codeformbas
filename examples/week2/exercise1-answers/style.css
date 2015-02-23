@@ -1,0 +1,20 @@
+body {
+	padding-top: 20px;
+	padding-left: 40px;
+	background-color: lightyellow;
+	font-size: 16px;
+}
+
+h1 {
+	color: darkblue;
+	font-family: Verdana;
+}
+
+ul, p {
+	font-family: Helvetica;
+}
+
+li {
+	padding: 5px;
+	list-style-type: square;
+}

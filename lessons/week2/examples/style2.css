@@ -1,0 +1,16 @@
+h1 {
+  font-family: Cambria;
+  color: darkblue;
+}
+
+body {
+  background-color: lightgrey;
+}
+
+a {
+  font-family: Helvetica;
+}
+
+li {
+  padding: 5px;
+}
