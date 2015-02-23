@@ -24,17 +24,15 @@
 							
 								<li><a href="#css-intro">Intro to CSS</a></li>
 							
-								<li><a href="#linking-css">Links to CSS Files</a></li>
-							
-								<li><a href="#css-selectors">CSS Selectors</a></li>
+								<li><a href="#linking-css">CSS Links</a></li>
 							
 								<li><a href="#exercise1">Exercise 1</a></li>
 							
-								<li><a href="#exercise2">Exercise 2</a></li>
+								<li><a href="#bitballoon">BitBalloon</a></li>
 							
-								<li><a href="#bitballoon">Bitballoon</a></li>
+								<li><a href="#-exercise2">Exercise 2</a></li>
 							
-								<li><a href="#-exercise3">Exercise 3</a></li>
+								<li><a href="#-css-selectors">CSS Selectors</a></li>
 							
 								<li><a href="#feedback">Feedback</a></li>
 							
@@ -72,17 +70,126 @@
 						
 							<section id="css-intro">
 <h1 id="intro-to-css">Intro to CSS</h1>
-<p>A look at how CSS works.</p>
+<p>CSS stands for Cascading Style Sheets, but you don&#39;t really need to know that. What you need to know is that CSS is what we use to control what a webpage <em>looks like</em>, or it&#39;s &quot;<em>style</em>&quot;.</p>
+<p>Last week we looked at HTML. HTML is used to specify a webpages content and basic layout. Recall a webpage like this:</p>
+<pre><code><span class="tag">&lt;html&gt;</span>
+  <span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Core Web Technologies<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;/head&gt;</span>
+  <span class="tag">&lt;body&gt;</span>
+      <span class="tag">&lt;h1&gt;</span>Core Technologies For Modern Websites<span class="tag">&lt;/h1&gt;</span>
+      <span class="tag">&lt;ul&gt;</span>
+          <span class="tag">&lt;li&gt;</span>&lt;a href=&quot;http://en.wikipedia.org/wiki/HTML&quot;&gt;Hypertext Markup Language (HTML)<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+          <span class="tag">&lt;li&gt;</span>&lt;a href=&quot;http://en.wikipedia.org/wiki/Cascading_Style_Sheets&quot;&gt;Cascading Style Sheets<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+          <span class="tag">&lt;li&gt;</span>&lt;a href=&quot;http://en.wikipedia.org/wiki/JavaScript&quot;&gt;JavaScript<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+      <span class="tag">&lt;/ul&gt;</span>
+  <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+</code></pre><p>Compared to the websites that you&#39;re used to visiting, you&#39;ll probably find the layout quite plan. You can see it in a browser <a href="examples/css-intro.html" title="Simple Website">here</a>, or in the image below:</p>
+<p><a href="examples/css-intro.html"><img src="img/css-intro.png" alt="A simple website" title="Simple Website"></a></p>
+<p>It works but it&#39;s pretty ugly. Using a new language called CSS we can add some nice styles. The first thing we do is create a new CSS file, which I&#39;ll call <code>style.css</code>, and link to it in our HTML document&#39;s <code><span class="tag">&lt;head&gt;</span></code> section.</p>
+<pre><code><span class="tag">&lt;html&gt;</span>
+  <span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Core Web Technologies<span class="tag">&lt;/title&gt;</span>
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+  <span class="tag">&lt;/head&gt;</span>
+  <span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>Core Technologies For Modern Websites<span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;ul&gt;</span>
+      <span class="tag">&lt;li&gt;</span>&lt;a href=&quot;http://en.wikipedia.org/wiki/HTML&quot;&gt;Hypertext Markup Language (HTML)<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+      <span class="tag">&lt;li&gt;</span>&lt;a href=&quot;http://en.wikipedia.org/wiki/Cascading_Style_Sheets&quot;&gt;Cascading Style Sheets<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+      <span class="tag">&lt;li&gt;</span>&lt;a href=&quot;http://en.wikipedia.org/wiki/JavaScript&quot;&gt;JavaScript<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;/ul&gt;</span>
+  <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+</code></pre><p>Now in our style.css let&#39;s add a couple style rules.</p>
+<pre><code>h1 {
+  font-family: Cambria;
+  color: darkblue;
+}
+</code></pre><p>Those two lines of CSS code should change the font color and style of the <code><span class="tag">&lt;h1&gt;</span></code> header. How&#39;s <a href="examples/css-intro2.html">our webpage</a> look now?</p>
+<p><a href="examples/css-intro2.html"><img src="img/css-intro2.png" alt="A simple website" title="Simple Website With Some CSS"></a></p>
+<p>While we&#39;re at it let&#39;s change a few more things:</p>
+<pre><code>body {
+  background-color: lightgrey;
+}
+
+a {
+  font-family: Helvetica;
+}
+
+li {
+  padding: 5px;
+}
+</code></pre><p>Before scrolling down just take a minute and think about what the webpage will look like. How do you expect it to have changed based on the above CSS rules? Ok, <a href="examples/css-intro3.html">check it out</a>. </p>
+<p><a href="examples/css-intro3.html"><img src="img/css-intro3.png" alt="A simple website" title="Simple Website With Some CSS"></a></p>
+<p>With a few simple changes (changing the heading font/color, changing the background color to light grey, changing the font of the links, and adding some padding around each link) the webpage is starting to look a lot better. That&#39;s the beauty of CSS.</p>
 
 </section>
 						
 							<section id="linking-css">
-<h1 id="links-to-css-files">Links to CSS Files</h1>
-<p>Literally just how to add a <code><span class="tag">&lt;link&gt;</span></code> tag into the head.</p>
+<h1 id="css-links">CSS Links</h1>
+<p>In modern websites, CSS is always written in a separate file and linked to from the <code><span class="tag">&lt;head&gt;</span></code> section of an HTML document. By default the link in the <code><span class="tag">&lt;head&gt;</span></code> section is a <em>relative</em> link, meaning that the filepath to the CSS file is relative to the location of the HTML file. So when you say:</p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+</code></pre><p>What you&#39;re really saying is &quot;<em>there&#39;s a CSS file in the same folder as the HTML file, and the CSS file&#39;s name is <code>style.css</code></em>&quot;</p>
+<p><a href="img/link1.png" title="Image"><img src="img/link1.png" alt="A Linked Folder" title="A folder with linked HTML and CSS files"></a></p>
+<p>Sometimes it&#39;s common to put your CSS files in a separate folder, to keep your working directory clean. Here is an example:</p>
+<p><a href="img/link2.png" title="Image"><img src="img/link2.png" alt="A Nested Linked Folder" title="A folder with linked HTML and CSS files"></a></p>
+<p>In this example the <code>style.css</code> file is inside a folder called <code>stylesheets</code>. To link to the file we simple need to add the folder name to the file path:</p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;stylesheets/style.css&quot;&gt;
+</code></pre><p>Remember, the file path in your <code><span class="tag">&lt;link&gt;</span></code> tag is simply the <em>relative</em> path to the CSS file, i.e. the path to the CSS file starting from the HTML file. If you keep that simple rule in your head it is quite easy to link CSS files to HTML files no matter what the folder structure.</p>
+<p>Finally, you might be wondering what that <code>rel=stylesheet</code> bit is. It&#39;s simple actually; <code>rel</code> is short for &quot;<em>relationship</em>&quot; - you&#39;re just specifying what the relationship is between the HTML file and the file you&#39;re linking to. In our case it&#39;s a CSS file so the relationship is &quot;<em>stylesheet</em>&quot;. There are <a href="http://www.w3schools.com/tags/att_link_rel.asp">a bunch of other options</a> as well if you&#39;re curious, although few are widely used.</p>
 
 </section>
 						
-							<section id="css-selectors">
+							<section id="exercise1">
+<h1 id="exercise-1">Exercise 1</h1>
+<p>In this exercise we will practice applying CSS to an existing webpage. Download <a href="examples/exercise1.zip" title="Week 2 Exercise 1">this folder</a> and extract it. You should see three files: <code>index.html</code>, <code>style.css</code>, and <code>answer.png</code>.  </p>
+<p><a href="img/exercise1.png" title="Exercise 1 Folder"><img src="img/exercise1.png" alt="Exercise 1 Folder"></a></p>
+<p>The goal of the exercise is to add CSS rules to <code>style.css</code> until <code>index.html</code> looks like <code>answer.png</code>. Currently <code>index.html</code> looks like this:</p>
+<p><img src="img/colleges1.png" alt="Finished Website"></p>
+<p>Some further guidance is provided below. The instructions are intentionally a little bit vague, to force you to have to search for things on the internet. I&#39;ve included some suggested Google search words with each line. And remember - <strong>always write your CSS yourself</strong>! Cutting and pasting might seem easier, but in reality it&#39;s the most efficient way to learn nothing.</p>
+<ul>
+<li>add 20 pixels (<code>20px</code>) of top padding and 40 pixels (<code>40px</code>) of left-side padding to the <code>body</code> element. (Suggested Search Words: &quot;CSS Padding&quot;)</li>
+<li>make the background color light yellow (Suggested Search Words: &quot;CSS Background Color&quot;, &quot;CSS Color Names&quot;)</li>
+<li>make the <code><span class="tag">&lt;h1&gt;</span></code> font color dark blue (Suggested Search Words: &quot;CSS Font Color&quot;)</li>
+<li>set the <code><span class="tag">&lt;h1&gt;</span></code> font to <code>Verdana</code> (Suggested Search Words: &quot;CSS Font Family&quot;)</li>
+<li>set the rest of the page&#39;s font to <code>Helvetica</code></li>
+<li>add 5px of padding to each <code><span class="tag">&lt;li&gt;</span></code> element to space them out slightly</li>
+<li>change the bullets on the list to be squares rather than circles (Suggested Search Words: &quot;CSS List Bullet Style&quot;)</li>
+</ul>
+<p>When you&#39;re done, the webpage should look like this:</p>
+<p><img src="img/colleges.png" alt="Finished Website"></p>
+<p>If you happen to be working on this after class and get really stuck, you can download a folder with the answers <a href="examples/exercise1-answers.zip" title="Week 2 Exercise 1 Answers">here</a>. However, it is really important to try this yourself for a while first.</p>
+
+</section>
+						
+							<section id="bitballoon">
+<h1 id="bitballoon">BitBalloon</h1>
+<p>Deploying webpages onto the internet used to be very difficult. However, recently one company has made it shockingly easy. We&#39;re going to use them now to get our site online.</p>
+<p><a href="https://www.bitballoon.com/" title="BitBalloon">https://www.bitballoon.com/</a></p>
+<p>BitBalloon is extremely easy to use. To try them out, simply navigate to their homepage and drag your folder from the last exercise (containing <code>style.css</code> and <code>index.html</code>) into the section where it says &quot;Drag Your Site Folder Here&quot;. You don&#39;t need to create an account or anything.</p>
+<p><img src="img/bitballoon.png" alt="Bit Balloon" title="BitBalloon"> </p>
+<p>If all goes well, you should see something like this:</p>
+<p><a href="img/bitballoon2.png" title="BitBalloon After a Successful Upload"><img src="img/bitballoon2.png" alt="Bit Balloon" title="BitBalloon"></a></p>
+<p>Once you have completed this step, your website should be available online. In the example above, the website is now available at the (randomly generated) URL: <a href="http://publisher-ape-28114.bitballoon.com" title="Randomly Generated BitBalloon URL">publisher-ape-28114.bitballoon.com</a>. When you use BitBalloon without a user account, the website will only be online for a limited time. </p>
+<p>Before next week you should create a user account for BitBalloon. You can do this by creating a <a href="http://www.github.com/" title="Github">Github</a> user account, and using it to log into BitBalloon. Pick your Github user name carefully, as in the programming world it&#39;s an important professional credential. (Similar to how having a good Twitter handle can be important in certain circles.)</p>
+
+</section>
+						
+							<section id="-exercise2">
+<h1 id="exercise-2">Exercise 2</h1>
+<p>Last week you made a <a href="http://localhost:8000/lessons/week1/#exercise1" title="Week 1 Exercise 1">simple website</a> listing things you like. This week it&#39;s time to add some style!</p>
+<ul>
+<li>Use your new CSS skills to add some flair to your website. Edit the colors and fonts, and also search around on the internet for other ideas that you haven&#39;t seen yet in this lesson. Be creative.</li>
+<li>Deploy your website to BitBalloon by dragging its entire folder into their upload interface, as shown in the previous section.</li>
+<li>Ask your neighbour to use their computer to verify that your BitBalloon website works. </li>
+<li>Congratulations: you&#39;ve just put your first website onto the internet! High-five someone!!!</li>
+</ul>
+
+</section>
+						
+							<section id="-css-selectors">
 <h1 id="css-selectors">CSS Selectors</h1>
 <ul>
 <li>Element selectors</li>
@@ -90,30 +197,6 @@
 <li>ID selectors</li>
 <li>Nested selectors</li>
 </ul>
-
-</section>
-						
-							<section id="exercise1">
-<h1 id="exercise-1">Exercise 1</h1>
-<p>Beautify a webpage with CSS.</p>
-
-</section>
-						
-							<section id="exercise2">
-<h1 id="exercise-2">Exercise 2</h1>
-<p>Update your old webpage with CSS.</p>
-
-</section>
-						
-							<section id="bitballoon">
-<h1 id="bitballoon">Bitballoon</h1>
-<p>Deploying webpages onto the internet used to be very difficult. However, recently one company has made it shockingly easy. Eventually we will look into a bit more detail on how a modern web application is deployed, but for now we just want to get something online!</p>
-
-</section>
-						
-							<section id="-exercise3">
-<h1 id="exercise-3">Exercise 3</h1>
-<p>Deploy your website!</p>
 
 </section>
 						
@@ -127,6 +210,15 @@
 						
 							<section id="-homework">
 <h1 id="homework">Homework</h1>
+<h2 id="essential">Essential</h2>
+<ol>
+<li>Complete <a href="https://dash.generalassemb.ly/projects" title="General Assembly Project 2">project 2</a> on General Assembly Dash.</li>
+<li>Try your hand at the <a href="http://flukeout.github.io/" title="CSS Selectors Game">CSS Selectors Game</a>. It might be a bit too advanced for you to finish all of the levels (prove me wrong!) but see if you can get through the first 10 levels.</li>
+</ol>
+<h2 id="bonus">Bonus</h2>
+<ol>
+<li>Read Joel Spolsky&#39;s absolute classic <a href="http://www.joelonsoftware.com/articles/fog0000000356.html" title="The Iceberg Secret Revealed">The Iceberg Secret Revealed</a>, on the relationship between technical and non-technical managers. Quoting: <em>It&#39;s pretty clear that programmers think in one language, and MBAs think in another. I&#39;ve been thinking about the problem of communication in software management for a while, because it&#39;s pretty clear to me that the <strong>power and rewards</strong> accrue to those rare individuals who know how to translate between Programmerese and MBAese.</em> Enough said - give it a read!</li>
+</ol>
 
 </section>
 						

@@ -7,12 +7,16 @@ var marked = require('marked'),
 
 var paths = {
 	content: '_lessons/**/*.md',
-	templates: '_templates/*.ejs'
+	templates: '_templates/*.ejs',
+	examples: ['examples/*.css', 'examples/*.html', 'examples/*.zip'],
+	images: ['img/*.png']
 }
 
 gulp.task('listen', function() {
 	gulp.watch(paths.content, ['build']);
 	gulp.watch(paths.templates, ['build']);
+	gulp.watch(paths.examples, ['build']);
+	gulp.watch(paths.images, ['build'])
 })
 
 gulp.task('build', function() {
@@ -72,7 +76,7 @@ gulp.task('build', function() {
 		}
 		// move examples into folder as needed
 		if (fs.existsSync(path.join('examples', lessonDir))) {
-			gulp.src(path.join('examples', lessonDir, '*.html')).pipe(gulp.dest(path.join('lessons', lessonDir, 'examples')))
+			gulp.src(path.join('examples', lessonDir, '*')).pipe(gulp.dest(path.join('lessons', lessonDir, 'examples')))
 		}
 
 	})
