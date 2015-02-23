@@ -191,6 +191,59 @@ li {
 						
 							<section id="-css-selectors">
 <h1 id="css-selectors">CSS Selectors</h1>
+<h2 id="element-selectors">Element Selectors</h2>
+<p>One of the trickiest things in CSS are &quot;selectors&quot;. CSS consists of two components: selectors and rules. For instance, in the following code:</p>
+<pre><code>p {
+  color: red;
+}
+</code></pre><p><code>p</code> is the selector, and <code>color: red;</code> is the rule. What this rule is saying is &quot;for all paragraphs (<code>p</code>) in the HTML document, make the font color red (<code>color: red;</code>).&quot; This kind of simple selector is known as an <strong>element selector</strong>.</p>
+<h2 id="class-selectors">Class Selectors</h2>
+<p>What is we had a webpage where we had multiple paragraphs, but we only wanted to color one of them red?</p>
+<pre><code><span class="tag">&lt;html&gt;</span>
+  <span class="tag">&lt;head&gt;</span>
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+    <span class="tag">&lt;title&gt;</span>My Awesome Page<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;/head&gt;</span>
+  <span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>Example Page<span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;p&gt;</span>The first paragraph is pretty normal.<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;p&gt;</span>Warning! The second paragraph is not normal.<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;p&gt;</span>The third paragraph is normal.<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+</code></pre><p>If we apply the CSS rule of <code>color: red;</code> using the CSS selector <code>p</code> we will color all paragraphs red - not what we want. Instead we need to use what&#39;s known as an HTML <em>class</em>.</p>
+<pre><code><span class="tag">&lt;html&gt;</span>
+  <span class="tag">&lt;head&gt;</span>
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+    <span class="tag">&lt;title&gt;</span>My Awesome Page<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;/head&gt;</span>
+  <span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>Example Page<span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;p&gt;</span>The first paragraph is pretty normal.<span class="tag">&lt;/p&gt;</span>
+    &lt;p class=&quot;warning&quot;&gt;Warning! The second paragraph is not normal.<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;p&gt;</span>The third paragraph is normal.<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+</code></pre><p>Notice that the second paragraph now has <code>class=&quot;warning&quot;</code> added inside its HTML tag. To apply the red color only to this paragraph, we simply need to use a <strong>class selector</strong>.</p>
+<pre><code>.warning {
+    color: red;
+}
+</code></pre><p>Notice that class selectors always start with a dot (<code>.warning</code>). The beauty of class selectors is that we can re-use them throughout our HTML document.</p>
+<pre><code><span class="tag">&lt;html&gt;</span>
+  <span class="tag">&lt;head&gt;</span>
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+    <span class="tag">&lt;title&gt;</span>My Awesome Page<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;/head&gt;</span>
+  <span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>Example Page<span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;p&gt;</span>All is well with the world.<span class="tag">&lt;/p&gt;</span>
+    &lt;p class=&quot;warning&quot;&gt;Warning! Maybe it&#39;s not.<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;p&gt;</span>No, I think it actually is.<span class="tag">&lt;/p&gt;</span>
+    &lt;p class=&quot;warning&quot;&gt;Wait, no, WARNING. It&#39;s totally not.<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;p&gt;</span>Let&#39;s end on a good note... all is well.<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+</code></pre><p>Notice in this instance that we can re-use the same CSS rule twice by simply applying &quot;<code>class=&quot;warning&quot;</code>&quot; to every paragraph which we want to display in red.</p>
 <ul>
 <li>Element selectors</li>
 <li>Class selectors</li>
