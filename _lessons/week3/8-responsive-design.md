@@ -2,9 +2,7 @@
 
 The responsive design paradigm is all about using media queries (and other tricks which are discussed in the [postscript](#postscript) link) in order to make pages intelligently resize to fit different devices. The idea is that rather than building a specific version of a site for mobile, tablet, and desktop, you build a site that would look good on a device of **any** width. This involves some strategic design shifts at different screen widths (known as "breakpoints"), and is more of an art than a science.
 
-This [example](examples/responsive.html "Responsive Design Example") showcases the idea nicely (if also a bit simplistically). 
-
-[![Responsive Design](img/responsive.gif "Responsive Design Example")](examples/responsive.html "Responsive Design Example")
+This [example](examples/responsive.html "Responsive Design Example") showcases the idea nicely (if also a bit simplistically).
 
 The page starts as a simple side-by-side blog style page, with an article and a navigation section. When the page is narrowed below 900px though, a few things happen.
 
