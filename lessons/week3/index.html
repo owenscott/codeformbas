@@ -1,0 +1,192 @@
+
+<!--Don't edit this version!-->
+
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<link href="../../css/style.css" rel="stylesheet">
+		<link href="../../css/boxes.css" rel="stylesheet">
+		<link rel="icon" href="../../img/favicon.ico">
+		<title>CodeForMBAs - Week 3</title>
+		<style>
+/*			#box1 {		
+				background-color: green;
+				border-color: blue;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="sidebar">
+				<div class="sidebar-container">
+					<a class="link-home" href="../..">home</a>
+					<h1>Week 3</h1>
+					<nav>
+						<ul id="links">
+							
+							
+								<li><a href="#introduction">Introduction</a></li>
+							
+								<li><a href="#css-review">CSS Review</a></li>
+							
+								<li><a href="#css-devtools">CSS + Developer Tools</a></li>
+							
+								<li><a href="#exercise1">Exercise 1</a></li>
+							
+								<li><a href="#mobile-web">The Mobile Web</a></li>
+							
+								<li><a href="#media-queries">Media Queries</a></li>
+							
+								<li><a href="#-exercise2">Exercise 2</a></li>
+							
+								<li><a href="#responsive-design">Responsive Design</a></li>
+							
+								<li><a href="#-exercise3">Exercise 3</a></li>
+							
+								<li><a href="#homework">Homework</a></li>
+							
+
+						</ul>
+					</nav>
+
+				</div>
+			</div>
+			<div class="main">
+				<div class="article-wrap">
+					<article class="content">
+						
+							<section id="introduction">
+<h1 id="introduction">Introduction</h1>
+<p>This week we&#39;ll be looking at Responsive Design, the most popular paradigm for building mobile-friendly websites. Not every company&#39;s mobile strategy needs to hinge on responsive design (though it&#39;s usually a good first option) but every decision maker should know what responsive design is.</p>
+
+</section>
+						
+							<section id="css-review">
+<h1 id="css-review">CSS Review</h1>
+<p>Let&#39;s just take a moment to review the structure of a CSS ruleset. Recall that a CSS ruleset has the following form. (If this CSS rule is clear to you just skip to the next section!).</p>
+<pre><code>h1 {
+  font-family: Cambria;
+  color: navy;
+}
+</code></pre><p> This CSS ruleset consists of two parts. The <em>selector</em>, <code>h1</code>, specifies what types of HTML elements the ruleset should apply to. In this case the selector, <code>h1</code>, is saying &quot;<em>apply these rules to all level-1 header elements in the document</em>&quot;. The <em>rules</em> themselves specify what styles should be applied to elements matching the selector. In this case we have two rules - <code>font-family: Cambria</code> and <code>color: navy</code> - which together imply that all level-1 headers should have navy blue text and be in Cambria font. </p>
+<p> That&#39;s it really. While you&#39;re here though, this is a good time to take careful note of the format and syntax. Notice that every line terminates with a semicolon (&#39;<code>;</code>&#39;), and that properties (<code>font-family</code>, <code>color</code>) are separated from values (<code>Cambria</code>, <code>navy</code>) by colons (&#39;<code>:</code>&#39;). Also note that the opening bracket is on the same line as the selector (&#39;<code>h1 {</code>&#39;), and that the rules are indented one tab-space from the selector and the closing bracket. You should try very hard to emulate this style when writing your own CSS.</p>
+
+</section>
+						
+							<section id="css-devtools">
+<h1 id="css-developer-tools">CSS + Developer Tools</h1>
+<p>In week 1 we saw that you can <a href="../week1/#devtools" title="Link to Week 1 Developer Tools section">edit HTML with developer tools</a>. Well, we can do the same thing with CSS, which is what we&#39;ll be tackling this week. Recall that we open developer tools in Chrome with &#39;<code>ctrl-shift-I</code>&#39; on PC or &#39;<code>alt-cmd-I</code>&#39; on Mac.</p>
+<p><a href="img/devtools1.png" title="Viewing CSS With Developer Tools"><img src="img/devtools1.png" alt="Viewing CSS With Developer Tools"></a></p>
+<p>On the right-hand side of the Developer Tools window is a CSS editing window. This window allows you to see all of the CSS rules that have been applied to the element which you&#39;re inspecting. For instance, in the above case we can see that the rules &#39;<code>margin: 10px</code>&#39;, &#39;<code>font-size: 21px</code>&#39;, and &#39;<code>font-weight: 800</code>&#39; have been applied to the inspected element via the &#39;<code>#ctitle</code>&#39; ID selector. </p>
+<p>Developer Tools allow us to see the CSS but they also allow us to <em>edit</em> it. The easiest way to edit the CSS for a particular element is to select that element using developer tools and then add rules in the empty &#39;<code>element.style {}</code>&#39; block at the top of the window.</p>
+<p><a href="img/devtools2.png" title="Editing CSS With Developer Tools"><img src="img/devtools2.png" alt="Editing CSS With Developer Tools"></a></p>
+<p>Notice in the above image that the previous &#39;<code>#ctitle</code>&#39; rules are still there, we have just added new rules that apply to the specific element only. We can use this kind of CSS editing to quickly prototype changes to webpages - whether we are building the webpage ourselves, or inspecting the work of someone we&#39;ve hired. Go ahead, try to make a couple of changes to the CSS on this page!</p>
+
+</section>
+						
+							<section id="exercise1">
+<h1 id="exercise-1">Exercise 1</h1>
+<p>This is a simple exercise to test your understanding of editing CSS using developer tools. Below are three sets of two boxes. For each set, your challenge is to make the second box look like the first one.</p>
+<div id="boxes">
+
+</div>
+</section>
+						
+							<section id="mobile-web">
+<h1 id="the-mobile-web">The Mobile Web</h1>
+<p>(If you&#39;re at risk of running short on time you may want to skip this section and read it after!)</p>
+<p>Just a few years ago, web developers could comfortably assume that all users would be visiting their website on a desktop computer or a laptop. Not so much anymore. At the moment <a href="http://techcrunch.com/2014/08/21/majority-of-digital-media-consumption-now-takes-place-in-mobile-apps/">around 60%</a> of traffic on the internet comes from mobile devices. Read that again. <em>60%</em>. If you&#39;re a business planning a website, it makes more sense to build a mobile-only website than a desktop-only website. And yet, so many businesses do just the opposite.</p>
+<p>Many companies&#39; mobile strategy is fragmented and badly planned. Detached mobile websites (e.g. m.whatever.com) are built, requiring developers to maintain all of the site&#39;s content in two different places, often leading to incomplete experiences on both mobile and desktop. Or, worse, companies invest in mobile apps at the expense of their website, adding an obnoxious popup window to try to get you to download their app. </p>
+<p><a href="http://wtfmobileweb.com/" title="WTF Mobile Web"><img src="img/pinterest.jpg" alt="Pinterest Homepage" title="Pinterest Homepage. (Source: WTF Mobile Web)"></a></p>
+<p>These terrible user experiences have real-world implications for businesses. A <a href="http://www.themobileplaybook.com/en-us/#/chapter2_1" title="The Mobile Playbook">report</a> by Google indicates that &quot;<em>40% [of users] have turned to a competitor&#39;s site after a bad mobile experience.</em>&quot; In 2015 there&#39;s simply no excuse for messing up mobile web design. Luckily this week we&#39;ll start to see how to do it well!</p>
+<p>(Check out lots more terrible design decisions on <a href="http://wtfmobileweb.com/" title="WTF Mobile Web">WTF Mobile Web</a>);</p>
+
+</section>
+						
+							<section id="media-queries">
+<h1 id="media-queries">Media Queries</h1>
+<p>The design paradigm we are going to teach is called <em>responsive design</em>. Responsive design is all about making a site look beautiful on any device. Before we can look at responsive design though, we need to look at <em>Media Queries</em>.</p>
+<p>Media Queries allow us to specify CSS rules that only take effect at certain screen widths. For instance:</p>
+<pre><code>@media (max-width: 600px) {
+  body {
+    background-color: yellow;
+    color: darkgreen;
+  }
+}
+</code></pre><p>What this rule is saying is that when the browser&#39;s width is less than 600px, the background color and text color should be different. Check it out <a href="examples/media.html" title="Media Query Example">here</a> or in the image below:</p>
+<p><img src="img/media-query-lores.gif" alt="Media Query"></p>
+<p>To get the most out of media queries you should also make sure you include the following line in your site&#39;s <code><span class="tag">&lt;head&gt;</span></code> section:</p>
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+</code></pre><p>The above is just a fancy way of saying that the width used in calculating whether a media query is applicable should be the device screen&#39;s width.</p>
+<p>For today we will only use <code>max-width</code> media queries, but there are <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries" title="MDN Media Queries Guide">many more rules</a> you can learn about as well. For a particularly amazing example of media queries in action, try horizontally resizing <a href="http://www.stuffandnonsense.co.uk" title="Stuff and Nonsense">this website</a>.</p>
+
+</section>
+						
+							<section id="-exercise2">
+<h1 id="exercise-2">Exercise 2</h1>
+<p>This exercise is simple. Make a simple HTML webpage and CSS file, with a yellow background. Use a media query to change the background color from yellow to purple when the screen is 500px wide or less.</p>
+
+</section>
+						
+							<section id="responsive-design">
+<h1 id="responsive-design">Responsive Design</h1>
+<p>The responsive design paradigm is all about using media queries (and other tricks which are discussed in the <a href="#postscript">postscript</a> link) in order to make pages intelligently resize to fit different devices. The idea is that rather than building a specific version of a site for mobile, tablet, and desktop, you build a site that would look good on a device of <strong>any</strong> width. This involves some strategic design shifts at different screen widths (known as &quot;breakpoints&quot;), and is more of an art than a science.</p>
+<p>This <a href="examples/responsive.html" title="Responsive Design Example">example</a> showcases the idea nicely (if also a bit simplistically). </p>
+<p><a href="examples/responsive.html" title="Responsive Design Example"><img src="img/responsive.gif" alt="Responsive Design" title="Responsive Design Example"></a></p>
+<p>The page starts as a simple side-by-side blog style page, with an article and a navigation section. When the page is narrowed below 900px though, a few things happen.</p>
+<ul>
+<li>The text alignment switches from <code>justify</code> to <code>left</code> (justified text can look weird when you only have 3-4 words per line on a narrower screen)</li>
+<li>the nav menu moves to the top of the page</li>
+<li>the margins adjust a little bit</li>
+<li>the text in the nav menu links gets bigger (for touch-screen interaction)</li>
+</ul>
+<p>When the page is further narrowed to 650px the nav menu collapses entirely into a so-called &quot;hamburger menu&quot;. (Note that in the example site this hamburger menu has yet to be activated.)</p>
+<p>When you&#39;re ready, check out the site <a href="examples/responsive.html" title="Responsive Design Example">here</a> and take a look at the CSS in the source code. For another canonical responsive design example, check out <a href="http://responsivewebdesign.com/robot/" title="Robot or Not">Robot or Not</a>, the site that launched the concept.</p>
+
+</section>
+						
+							<section id="-exercise3">
+<h1 id="exercise-3">Exercise 3</h1>
+<p>Now that you&#39;ve had some experience with media queries, try converting your site from last week to be more responsive, or building a responsive site from scratch. Once you&#39;re done, <a href="../week2/#bitballoon">upload the site to BitBalloon</a></p>
+
+</section>
+						
+							<section id="homework">
+<h1 id="homework">Homework</h1>
+<h2 id="essential">Essential</h2>
+<ol>
+<li>Complete <a href="https://dash.generalassemb.ly/projects" title="Dash Project 3">Project 3</a> of the General Assembly Dash curriculum.</li>
+</ol>
+<h2 id="bonus">Bonus</h2>
+<ol>
+<li>If you really want to learn the guts of responsive web design, <a href="http://learnlayout.com/" title="Learn Layout">Learn Layout</a> is a short, amazing tutorial. As you read through it, try to build some example pages yourself. </li>
+<li>If you&#39;re <strong>really</strong> getting into this stuff, then consider a cash outlay on Ethan Marcotte&#39;s book <a href="http://abookapart.com/products/responsive-web-design" title="Responsive Web Design book">Responsive Web Design</a> which launched this entire design paradigm. It&#39;s a great read and extremely beginner-friendly.</li>
+</ol>
+
+</section>
+						
+					</article>
+				</div>
+			<!-- 	<footer class="site-footer">
+					<p>(c) Owen Scott 2015. Theme is based completely derivatively from the (MIT Licensed) <a href="https://github.com/shashankmehta/greyshade">Greyshade Theme.</a> This page also MIT licensed.</p>
+				</footer>
+ -->
+			</div>
+		</div>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/scrollspy.js"></script>
+		<script src="../../js/jquery-visible.min.js"></script>
+		<script src="../../js/main.js"></script>
+		<script src="../../js/squares.js"></script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-60113108-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+	</body>
+</html>

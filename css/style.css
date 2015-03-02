@@ -188,6 +188,7 @@ body {
 
 h1, h2, h3 {
 	font-family: Cambria,Georgia,serif;
+	text-align: left;
 }
 
 footer {

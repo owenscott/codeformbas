@@ -1,0 +1,25 @@
+body {
+	background-color: black;
+	color: white;
+	font-size: 18px;
+	font-family: Helvetica;
+	line-height: 24px;
+	padding: 40px 20px;
+}
+
+.container {
+	max-width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+h1 {
+	font-family: Cambria;
+}
+
+@media (max-width: 600px) {
+	body {
+		background-color: yellow;
+		color: darkgreen;
+	}
+}

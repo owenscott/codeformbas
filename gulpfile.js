@@ -9,7 +9,7 @@ var paths = {
 	content: '_lessons/**/*.md',
 	templates: '_templates/*.ejs',
 	examples: ['examples/*.css', 'examples/*.html', 'examples/*.zip'],
-	images: ['img/*.png']
+	images: ['img/*.png', 'img/**/*.png', 'img/*.gif', 'img/**/*.gif']
 }
 
 gulp.task('listen', function() {
@@ -72,7 +72,7 @@ gulp.task('build', function() {
 	
 		// move images into folder as needed
 		if (fs.existsSync(path.join('img', lessonDir))) {
-			gulp.src(path.join('img', lessonDir, '*.png')).pipe(gulp.dest(path.join('lessons', lessonDir, 'img')))
+			gulp.src(path.join('img', lessonDir, '*')).pipe(gulp.dest(path.join('lessons', lessonDir, 'img')))
 		}
 		// move examples into folder as needed
 		if (fs.existsSync(path.join('examples', lessonDir))) {

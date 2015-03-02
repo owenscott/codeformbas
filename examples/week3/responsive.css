@@ -1,0 +1,72 @@
+body {
+	font-size: 20px;
+	line-height: 24px;
+	font-family: Helvetica;
+	text-align: justify;
+}
+
+nav {
+	float: left;
+	width: 150;	
+}
+
+nav a {
+	display: block;
+	margin: 10px 0px;
+	color: black;
+}
+
+main {
+	margin-left: 150px;
+}
+
+.container {
+	max-width: 800px;
+	margin: 40px auto;
+}
+
+.hamburger {
+	display: none;
+}
+
+@media (max-width: 900px) {
+	body {
+		text-align: left
+	}
+	nav {
+		float: none;
+		width: 100%;
+	}
+	nav a {
+		display: inline-block;
+		padding: 5px 20px;
+		font-size: 26px;
+		line-height: 26px;
+	}
+	main {
+		margin: 0;
+	}
+	.container {
+		margin: 60px;
+	}
+}
+
+@media (max-width: 650px) {
+	.hamburger {
+		display: block;
+	  width: 30px;
+	  height: 30px;
+	  cursor: pointer;
+	  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+	  background-size: contain;
+	}
+
+	h1 {
+		line-height: 1.3em;
+	}
+
+	nav a {
+		display: none;
+	}
+}
+
