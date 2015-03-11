@@ -31,4 +31,4 @@ The result of this can be seen in the developer tools. Check it out for yourself
 
 ![Console Log Example](img/console.png "Console Log Example")
 
-Notice that the actual contents of the `<script>` tag, e.g. the JavaScript code, not shown in the browser.
+Notice that the actual contents of the `<script>` tag, e.g. the JavaScript code, is not shown in the browser. Only the result of the code is displayed - in this case the number `10` in the console.

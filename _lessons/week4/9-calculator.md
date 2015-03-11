@@ -22,7 +22,7 @@ By now I suspect you're getting the hang of things, so we're going to introduce/
 
         <script>
 
-    	    function calculate() {
+          function calculate() {
 
             var firstNumber = parseInt( document.getElementById('firstNumber').value );
 
@@ -32,7 +32,7 @@ By now I suspect you're getting the hang of things, so we're going to introduce/
 
             document.getElementById('result').innerHTML = result;
 
-    	    }
+          }
 
         </script>
 

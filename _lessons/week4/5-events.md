@@ -1,6 +1,6 @@
 # Events
 
-JavaScript is an *event-driven* language, meaning that usually we want to run a particular snipped of code in response to a user's interaction with the page (an "event"). To do this we need to block our code into what are known as *functions*. A *function* is simply a named set of code statements that we run together. In JavaScript we introduce a function with the `function` keyword (surprising, I know) and enclose its code statements with curly braces ('`{}`'). Pay careful attention to the syntax below:
+JavaScript is an *event-driven* language, meaning that usually we want to run a particular snippet of code in response to a user's interaction with the page (i.e. an "event"). To do this we need to block our code into what are known as *functions*. A *function* is simply a named set of code statements that we run together. In JavaScript we introduce a function with the `function` keyword (surprising, I know) and enclose its code with curly braces ('`{}`'). Pay careful attention to the syntax below:
 
     function sayHello() {
 

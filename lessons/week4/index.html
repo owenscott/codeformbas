@@ -70,7 +70,7 @@
 							<section id="basics">
 <h1 id="basics">Basics</h1>
 <p>Our philosophy this week is to sidestep programming language syntax as much as possible, rather than teach it. However, some very basic examples should be helpful.</p>
-<p>The following snipped of code creates a new <code>variable</code>.</p>
+<p>The following snippet of code creates a new <code>variable</code>.</p>
 <pre><code><span class="hljs-keyword">var</span> myNumber = <span class="hljs-number">4</span>;
 </code></pre><p>All this means is that we&#39;ve created a variable called <code>myNumber</code> and assigned it a value of <code>4</code>. We can access that value again later in the program.</p>
 <pre><code><span class="hljs-reserved">var</span> myNumber = <span class="hljs-number">4</span>;
@@ -79,7 +79,7 @@
 <span class="hljs-reserved">var</span> mySum = myNumber + myOtherNumber;
 
 <span class="hljs-built_in">console</span>.log(mySum);
-</code></pre><p>In the above example <code>mySum</code> will be equal to <code>10</code>. The <code>console.log</code> statement prints the value of <code>mySum</code> into developer tools console.</p>
+</code></pre><p>In the above example <code>mySum</code> will be equal to <code>10</code>. The <code>console.log()</code> statement prints the value of <code>mySum</code> into developer tools console.</p>
 
 </section>
 						
@@ -112,7 +112,7 @@
 <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">html</span>&gt;</span></span>
 </code></pre><p>The result of this can be seen in the developer tools. Check it out for yourself <a href="examples/console.html" title="Example JavaScript">here</a>. See that <code>10</code> in the console? That&#39;s the result of your <code>console.log()</code> statement.</p>
 <p><img src="img/console.png" alt="Console Log Example" title="Console Log Example"></p>
-<p>Notice that the actual contents of the <code><span class="tag">&lt;script&gt;</span></code> tag, e.g. the JavaScript code, not shown in the browser.</p>
+<p>Notice that the actual contents of the <code><span class="tag">&lt;script&gt;</span></code> tag, e.g. the JavaScript code, is not shown in the browser. Only the result of the code is displayed - in this case the number <code>10</code> in the console.</p>
 
 </section>
 						
@@ -128,7 +128,7 @@
 						
 							<section id="events">
 <h1 id="events">Events</h1>
-<p>JavaScript is an <em>event-driven</em> language, meaning that usually we want to run a particular snipped of code in response to a user&#39;s interaction with the page (an &quot;event&quot;). To do this we need to block our code into what are known as <em>functions</em>. A <em>function</em> is simply a named set of code statements that we run together. In JavaScript we introduce a function with the <code>function</code> keyword (surprising, I know) and enclose its code statements with curly braces (&#39;<code>{}</code>&#39;). Pay careful attention to the syntax below:</p>
+<p>JavaScript is an <em>event-driven</em> language, meaning that usually we want to run a particular snippet of code in response to a user&#39;s interaction with the page (i.e. an &quot;event&quot;). To do this we need to block our code into what are known as <em>functions</em>. A <em>function</em> is simply a named set of code statements that we run together. In JavaScript we introduce a function with the <code>function</code> keyword (surprising, I know) and enclose its code with curly braces (&#39;<code>{}</code>&#39;). Pay careful attention to the syntax below:</p>
 <pre><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sayHello</span><span class="hljs-params">()</span> </span>{
 
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Hello World! Here is a random number '</span> + <span class="hljs-built_in">Math</span>.random() );
@@ -231,7 +231,7 @@
 
     <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">script</span>&gt;</span></span><span class="javascript">
 
-        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">calculate</span><span class="hljs-params">()</span> </span>{
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">calculate</span><span class="hljs-params">()</span> </span>{
 
         <span class="hljs-keyword">var</span> firstNumber = <span class="hljs-built_in">parseInt</span>( <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'firstNumber'</span>).value );
 
@@ -241,7 +241,7 @@
 
         <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'result'</span>).innerHTML = result;
 
-        }
+      }
 
     </span><span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">script</span>&gt;</span></span>
 
