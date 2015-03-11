@@ -5,10 +5,16 @@ var marked = require('marked'),
 		path = require('path'),
 		gulp = require('gulp');
 
+marked.setOptions({
+  highlight: function (code) {
+    return require('highlight.js').highlightAuto(code).value;
+  }
+});
+
 var paths = {
 	content: '_lessons/**/*.md',
 	templates: '_templates/*.ejs',
-	examples: ['examples/*.css', 'examples/*.html', 'examples/*.zip'],
+	examples: ['examples/**/*.css', 'examples/**/*.html', 'examples/**/*.zip'],
 	images: ['img/*.png', 'img/**/*.png', 'img/*.gif', 'img/**/*.gif']
 }
 

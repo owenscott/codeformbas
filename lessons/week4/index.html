@@ -1,0 +1,303 @@
+
+<!--Don't edit this version!-->
+
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<link href="../../css/style.css" rel="stylesheet">
+		<link href="../../css/boxes.css" rel="stylesheet">
+		<link href="../../css/highlight.css" rel="stylesheet">
+		<link rel="icon" href="../../img/favicon.ico">
+		<title>CodeForMBAs - Week 4</title>
+		<style>
+/*			#box1 {		
+				background-color: green;
+				border-color: blue;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="sidebar">
+				<div class="sidebar-container">
+					<a class="link-home" href="../..">home</a>
+					<h1>Week 4</h1>
+					<nav>
+						<ul id="links">
+							
+							
+								<li><a href="#introduction">Introduction</a></li>
+							
+								<li><a href="#basics">Basics</a></li>
+							
+								<li><a href="#running-code">Running Code</a></li>
+							
+								<li><a href="#exercise1">Exercise 1</a></li>
+							
+								<li><a href="#events">Events</a></li>
+							
+								<li><a href="#exercise2">Exercise 2</a></li>
+							
+								<li><a href="#js-html">JS and HTML</a></li>
+							
+								<li><a href="#exercise3">Exercise 3</a></li>
+							
+								<li><a href="#calculator">Calculator</a></li>
+							
+								<li><a href="#-exercise4">Exercise 4</a></li>
+							
+								<li><a href="#-feedback">Feedback</a></li>
+							
+								<li><a href="#-homework">Homework</a></li>
+							
+
+						</ul>
+					</nav>
+
+				</div>
+			</div>
+			<div class="main">
+				<div class="article-wrap">
+					<article class="content">
+						
+							<section id="introduction">
+<h1 id="introduction">Introduction</h1>
+<p>This week we are going to look at JavaScript. JavaScript is a programming language which allows us to make webpages interactive. JavaScript is the only programming language which can run in web browsers, and so web developers end up writing quite a lot of it (whether they like JavaScript or not!).</p>
+<p>Our introduction this week will be <strong>very</strong> simple. If you want to learn more JavaScript you should make sure to check out the homework.</p>
+
+</section>
+						
+							<section id="basics">
+<h1 id="basics">Basics</h1>
+<p>Our philosophy this week is to sidestep programming language syntax as much as possible, rather than teach it. However, some very basic examples should be helpful.</p>
+<p>The following snipped of code creates a new <code>variable</code>.</p>
+<pre><code><span class="hljs-keyword">var</span> myNumber = <span class="hljs-number">4</span>;
+</code></pre><p>All this means is that we&#39;ve created a variable called <code>myNumber</code> and assigned it a value of <code>4</code>. We can access that value again later in the program.</p>
+<pre><code><span class="hljs-reserved">var</span> myNumber = <span class="hljs-number">4</span>;
+<span class="hljs-reserved">var</span> myOtherNumber = <span class="hljs-number">6</span>;
+
+<span class="hljs-reserved">var</span> mySum = myNumber + myOtherNumber;
+
+<span class="hljs-built_in">console</span>.log(mySum);
+</code></pre><p>In the above example <code>mySum</code> will be equal to <code>10</code>. The <code>console.log</code> statement prints the value of <code>mySum</code> into developer tools console.</p>
+
+</section>
+						
+							<section id="running-code">
+<h1 id="running-code">Running Code</h1>
+<p>It&#39;s all well and good to compute <code>4 + 6 = 10</code>, but how do you actually run this kind of code within a webpage? The answer is the <code><span class="tag">&lt;script&gt;</span></code> tag.</p>
+<pre><code><span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">html</span>&gt;</span></span>
+
+  <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">head</span>&gt;</span></span>
+
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">title</span>&gt;</span></span>My Example Page<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">title</span>&gt;</span></span>
+
+  <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">head</span>&gt;</span></span>
+
+  <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">body</span>&gt;</span></span>
+
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">h1</span>&gt;</span></span>A Mostly Empty Page<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">h1</span>&gt;</span></span>
+
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">script</span>&gt;</span></span><span class="javascript">
+
+      <span class="hljs-keyword">var</span> myNum1 = <span class="hljs-number">4</span>;
+      <span class="hljs-keyword">var</span> myNum2 = <span class="hljs-number">6</span>;
+      <span class="hljs-keyword">var</span> myNum3 = myNum1 + myNum2;
+      <span class="hljs-built_in">console</span>.log(myNum3);
+
+    </span><span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">script</span>&gt;</span></span>
+
+  <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">body</span>&gt;</span></span>
+
+<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">html</span>&gt;</span></span>
+</code></pre><p>The result of this can be seen in the developer tools. Check it out for yourself <a href="examples/console.html" title="Example JavaScript">here</a>. See that <code>10</code> in the console? That&#39;s the result of your <code>console.log()</code> statement.</p>
+<p><img src="img/console.png" alt="Console Log Example" title="Console Log Example"></p>
+<p>Notice that the actual contents of the <code><span class="tag">&lt;script&gt;</span></code> tag, e.g. the JavaScript code, not shown in the browser.</p>
+
+</section>
+						
+							<section id="exercise1">
+<h1 id="exercise-1">Exercise 1</h1>
+<p>Create a new empty webpage and add a <code><span class="tag">&lt;script&gt;</span></code> tag to it. Log the words &#39;Hello World!&#39; into the console using the following code snipped:</p>
+<pre><code><span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Hello World!'</span>);
+</code></pre><p>Open your webpage and verify that the words are displayed in the developer tools console. Once you have it working, try replacing the <code>console.log()</code> statement with:</p>
+<pre><code>alert(<span class="hljs-string">'Hello World!'</span>);
+</code></pre><p>What happens when you open the page?</p>
+
+</section>
+						
+							<section id="events">
+<h1 id="events">Events</h1>
+<p>JavaScript is an <em>event-driven</em> language, meaning that usually we want to run a particular snipped of code in response to a user&#39;s interaction with the page (an &quot;event&quot;). To do this we need to block our code into what are known as <em>functions</em>. A <em>function</em> is simply a named set of code statements that we run together. In JavaScript we introduce a function with the <code>function</code> keyword (surprising, I know) and enclose its code statements with curly braces (&#39;<code>{}</code>&#39;). Pay careful attention to the syntax below:</p>
+<pre><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sayHello</span><span class="hljs-params">()</span> </span>{
+
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Hello World! Here is a random number '</span> + <span class="hljs-built_in">Math</span>.random() );
+
+}
+</code></pre><p>This is a very simple function which will log &#39;Hello World&#39; along with a random number into the console every time it is run. (The random number is just for fun...). We can attach this to a button on our webpage using the <code>onclick</code> property. Again, pay careful attention to the syntax below.</p>
+<pre><code><span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">html</span>&gt;</span></span>
+
+  <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">head</span>&gt;</span></span>
+
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">title</span>&gt;</span></span>Our First Event!<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">title</span>&gt;</span></span>
+
+  <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">head</span>&gt;</span></span>
+
+  <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">body</span>&gt;</span></span>
+
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">h1</span>&gt;</span></span>Do you want to say hello?<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">h1</span>&gt;</span></span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">onclick</span>=<span class="hljs-value">"sayHello()"</span>&gt;</span>Hello<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">button</span>&gt;</span></span>
+
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">script</span>&gt;</span></span><span class="javascript">
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sayHello</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Hello World! Here is a random number '</span> + <span class="hljs-built_in">Math</span>.random() );
+        }
+
+      </span><span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">script</span>&gt;</span></span>
+
+
+  <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">body</span>&gt;</span></span>
+
+<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">html</span>&gt;</span></span>
+</code></pre><p>Check out the result in your browser <a href="examples/button.html" title="Hello World With a Button">here</a>. Remember to keep your console open!</p>
+
+</section>
+						
+							<section id="exercise2">
+<h1 id="exercise-2">Exercise 2</h1>
+<p>Create a simple webpage with an <code><span class="tag">&lt;h1&gt;</span></code> tag and a <code><span class="tag">&lt;button&gt;</span></code>. Write a JavaScript program to log something into the console every time the button is pushed. Use the previous section for guidance but make sure you write all the code yourself - no copy-and-pasting!</p>
+<p>(Also, this is a good time to accept the fact that programming languages are very very picky about syntax. Make sure you are diligent about all of your brackets!).</p>
+
+</section>
+						
+							<section id="js-html">
+<h1 id="js-and-html">JS and HTML</h1>
+<p>Ok, so we&#39;ve logged some things into the console and made an alert box or two, but how do we actually make a webpage interactive? Well, for today we&#39;ll look at the simplest way: by referencing the <code>id</code> properties of HTML elements. An example is the easiest way to look at this:</p>
+<pre><code><span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">html</span>&gt;</span></span>
+
+  <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">head</span>&gt;</span></span>
+
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">title</span>&gt;</span></span>Yet Another Example<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">title</span>&gt;</span></span>
+
+  <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">head</span>&gt;</span></span>
+
+  <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">body</span>&gt;</span></span>
+
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">h1</span>&gt;</span></span>This one's going to be cool.<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">h1</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"target-paragraph"</span>&gt;</span></span>An innocent paragraph, minding it's own business.<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">p</span>&gt;</span></span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">onclick</span>=<span class="hljs-value">"updateParagraph()"</span>&gt;</span>Do Something Cool<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">button</span>&gt;</span></span>
+
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">script</span>&gt;</span></span><span class="javascript">
+
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">updateParagraph</span><span class="hljs-params">()</span> </span>{
+          <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'target-paragraph'</span>).innerHTML = <span class="hljs-string">'Bam!'</span>
+      }
+
+    </span><span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">script</span>&gt;</span></span>
+
+  <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">body</span>&gt;</span></span>
+
+<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">html</span>&gt;</span></span>
+</code></pre><p>Check it out in action <a href="examples/bam.html" title="Example of a Dynamic Page">here</a>. Again note the <code>onclick</code> attribute in the <code><span class="tag">&lt;button&gt;</span></code> tag, the use of a corresponding <code>function</code> in the <code><span class="tag">&lt;script&gt;</span></code> tag, and a new tool, <code>document.getElementById</code> which allows us to find an element on the page and update its <code>innerHTML</code> (e.g. the stuff between it&#39;s opening and closing tag).</p>
+
+</section>
+						
+							<section id="exercise3">
+<h1 id="exercise-3">Exercise 3</h1>
+<p>Create a simple HTML page with a paragraph and a button. Use some JavaScript magic to change the paragraph&#39;s text when the button is clicked. Again, use the previous section for reference, being very careful about syntax, but no copy-and-pasting!</p>
+
+</section>
+						
+							<section id="calculator">
+<h1 id="calculator">Calculator</h1>
+<p>By now I suspect you&#39;re getting the hang of things, so we&#39;re going to introduce/combine a whole bunch of stuff at once. The following is a truly interactive webpage.</p>
+<pre><code><span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">html</span>&gt;</span></span>
+
+  <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">head</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">title</span>&gt;</span></span>A Calculator!<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">title</span>&gt;</span></span>
+  <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">head</span>&gt;</span></span>
+
+  <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">body</span>&gt;</span></span>
+
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">h1</span>&gt;</span></span>The Amazing Adding Machine<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">h1</span>&gt;</span></span>
+
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">label</span>&gt;</span></span>Number 1: <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">label</span>&gt;</span></span><span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"number"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"firstNumber"</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">label</span>&gt;</span></span>Number 2: <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">label</span>&gt;</span></span><span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"number"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"secondNumber"</span>&gt;</span></span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">onclick</span>=<span class="hljs-value">"calculate()"</span>&gt;</span>Calculate<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">button</span>&gt;</span></span>
+
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">p</span>&gt;</span></span>The result... <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"result"</span>&gt;</span></span><span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">span</span>&gt;</span></span><span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">p</span>&gt;</span></span>
+
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">script</span>&gt;</span></span><span class="javascript">
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">calculate</span><span class="hljs-params">()</span> </span>{
+
+        <span class="hljs-keyword">var</span> firstNumber = <span class="hljs-built_in">parseInt</span>( <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'firstNumber'</span>).value );
+
+        <span class="hljs-keyword">var</span> secondNumber = <span class="hljs-built_in">parseInt</span>( <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'secondNumber'</span>).value );
+
+        <span class="hljs-keyword">var</span> result = firstNumber + secondNumber;
+
+        <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'result'</span>).innerHTML = result;
+
+        }
+
+    </span><span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">script</span>&gt;</span></span>
+
+  <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">body</span>&gt;</span></span>
+
+<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">html</span>&gt;</span></span>
+</code></pre><p>You can, of course, see this wondrous program in action <a href="examples/calculator.html" title="A Calculator">here</a>. There are really only two things that are new here. First, we are using <code>.value</code> instead of <code>.innerHTML</code> to get the value of the numbers input into the two <code><span class="tag">&lt;input&gt;</span></code> elements by the user. You shouldn&#39;t worry about this too much right now - suffice it to say that we usually want to use <code>value</code> for <code><span class="tag">&lt;input&gt;</span></code> elements.</p>
+<p>The second thing is the <code>parseInt( ... )</code> statement which is wrapping our code for getting the value from the <code><span class="tag">&lt;input&gt;</span></code>s. For now all you need to know is that this is necessary - you&#39;ll see why in the final exercise.</p>
+
+</section>
+						
+							<section id="-exercise4">
+<h1 id="exercise-4">Exercise 4</h1>
+<p>You guessed it: build a calculator! Try building something similar to what is shown in the previous section, and then experimenting with ways to improve it. Don&#39;t forget to add a little CSS to improve the calculator&#39;s look if you have time!</p>
+<hr>
+<p>Bonus: What happens if you build your calculator without the <code>parseInt</code> statement? Can you figure out why it&#39;s needed?</p>
+
+</section>
+						
+							<section id="-feedback">
+<h1 id="feedback">Feedback</h1>
+<p>Every week it would be fantastic to get some anonymous feedback to help make this course better. If you have a moment, please put something in here and press submit!</p>
+<iframe src="https://docs.google.com/forms/d/1A-OM-bi9mauep5uoxMNnY330YQYDgFBdxFOYayJGcXY/viewform?embedded=true#start=embed" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+</section>
+						
+							<section id="-homework">
+<h1 id="homework">Homework</h1>
+<p>If you want to really dive into JavaScript the now is a great time to burn 45 minutes on CodeSchool&#39;s <a href="https://www.codeschool.com/courses/javascript-road-trip-part-1" title="JavaScript Road Trip">JavaScript Roadtrip</a>. Don&#39;t forget to try to work some of the tricks you learn into live webpages.</p>
+<p>If you prefer to work on core HTML and CSS knowledge, I&#39;d suggest catching up on some of the homework&#39;s from previous weeks for review.</p>
+
+</section>
+						
+					</article>
+				</div>
+			<!-- 	<footer class="site-footer">
+					<p>(c) Owen Scott 2015. Theme is based completely derivatively from the (MIT Licensed) <a href="https://github.com/shashankmehta/greyshade">Greyshade Theme.</a> This page also MIT licensed.</p>
+				</footer>
+ -->
+			</div>
+		</div>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/scrollspy.js"></script>
+		<script src="../../js/jquery-visible.min.js"></script>
+		<script src="../../js/main.js"></script>
+		<script src="../../js/squares.js"></script>
+		<script src="../../js/highlight.js"></script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-60113108-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+	</body>
+</html>

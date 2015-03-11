@@ -1,0 +1,39 @@
+<html>
+
+  <head>
+    <title>A Calculator!</title>
+  </head>
+
+  <body>
+
+  	<h1>The Amazing Adding Machine</h1>
+
+    <label>Number 1: </label><input type="number" id="firstNumber">
+    <label>Number 2: </label><input type="number" id="secondNumber">
+
+    <button onclick="calculate()">Calculate</button>
+
+    <p>The result... <span id="result"></span></p>
+
+    <script>
+
+    	function calculate() {
+
+        var firstNumber = parseInt( document.getElementById('firstNumber').value );
+
+        var secondNumber = parseInt( document.getElementById('secondNumber').value );
+
+        var result = firstNumber + secondNumber;
+
+        document.getElementById('result').innerHTML = result;
+
+    	}
+
+
+
+    </script>
+
+
+  </body>
+
+</html>

@@ -6,6 +6,7 @@
 		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 		<link href="../../css/style.css" rel="stylesheet">
 		<link href="../../css/boxes.css" rel="stylesheet">
+		<link href="../../css/highlight.css" rel="stylesheet">
 		<link rel="icon" href="../../img/favicon.ico">
 		<title>CodeForMBAs - Week 3</title>
 		<style>
@@ -64,10 +65,10 @@
 							<section id="css-review">
 <h1 id="css-review">CSS Review</h1>
 <p>Let&#39;s just take a moment to review the structure of a CSS ruleset. Recall that a CSS ruleset has the following form. (If this CSS rule is clear to you just skip to the next section!).</p>
-<pre><code>h1 {
-  font-family: Cambria;
-  color: navy;
-}
+<pre><code><span class="hljs-tag">h1</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">font-family</span>:<span class="hljs-value"> Cambria</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> navy</span></span>;
+<span class="hljs-rule">}</span></span>
 </code></pre><p> This CSS ruleset consists of two parts. The <em>selector</em>, <code>h1</code>, specifies what types of HTML elements the ruleset should apply to. In this case the selector, <code>h1</code>, is saying &quot;<em>apply these rules to all level-1 header elements in the document</em>&quot;. The <em>rules</em> themselves specify what styles should be applied to elements matching the selector. In this case we have two rules - <code>font-family: Cambria</code> and <code>color: navy</code> - which together imply that all level-1 headers should have navy blue text and be in Cambria font. </p>
 <p> That&#39;s it really. While you&#39;re here though, this is a good time to take careful note of the format and syntax. Notice that every line terminates with a semicolon (&#39;<code>;</code>&#39;), and that properties (<code>font-family</code>, <code>color</code>) are separated from values (<code>Cambria</code>, <code>navy</code>) by colons (&#39;<code>:</code>&#39;). Also note that the opening bracket is on the same line as the selector (&#39;<code>h1 {</code>&#39;), and that the rules are indented one tab-space from the selector and the closing bracket. You should try very hard to emulate this style when writing your own CSS.</p>
 
@@ -104,16 +105,16 @@
 <h1 id="media-queries">Media Queries</h1>
 <p>The design paradigm we are going to teach is called <em>responsive design</em>. Responsive design is all about making a site look beautiful on any device. Before we can look at responsive design though, we need to look at <em>Media Queries</em>.</p>
 <p>Media Queries allow us to specify CSS rules that only take effect at certain screen widths. For instance:</p>
-<pre><code>@media (max-width: 600px) {
-  body {
-    background-color: yellow;
-    color: darkgreen;
-  }
+<pre><code><span class="hljs-at_rule">@<span class="hljs-keyword">media</span> (max-width: <span class="hljs-number">600px</span>) </span>{
+  <span class="hljs-tag">body</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> yellow</span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> darkgreen</span></span>;
+  <span class="hljs-rule">}</span></span>
 }
 </code></pre><p>What this rule is saying is that when the browser&#39;s width is less than 600px, the background color and text color should be different. Check it out <a href="examples/media.html" title="Media Query Example">here</a> or in the image below:</p>
 <p><img src="img/media-query-lores.gif" alt="Media Query"></p>
 <p>To get the most out of media queries you should also make sure you include the following line in your site&#39;s <code><span class="tag">&lt;head&gt;</span></code> section:</p>
-<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+<pre><code><span class="tag">&lt;meta <span class="hljs-variable">name=</span><span class="hljs-string">"viewport"</span> <span class="hljs-variable">content=</span><span class="hljs-string">"width=device-width, initial-scale=1"</span>&gt;</span>
 </code></pre><p>The above is just a fancy way of saying that the width used in calculating whether a media query is applicable should be the device screen&#39;s width.</p>
 <p>For today we will only use <code>max-width</code> media queries, but there are <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries" title="MDN Media Queries Guide">many more rules</a> you can learn about as well. For a particularly amazing example of media queries in action, try horizontally resizing <a href="http://www.stuffandnonsense.co.uk" title="Stuff and Nonsense">this website</a>.</p>
 
@@ -174,6 +175,7 @@
 		<script src="../../js/jquery-visible.min.js"></script>
 		<script src="../../js/main.js"></script>
 		<script src="../../js/squares.js"></script>
+		<script src="../../js/highlight.js"></script>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

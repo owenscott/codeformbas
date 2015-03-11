@@ -163,7 +163,7 @@ a.link-home {
 
 pre {
 	padding: 10px;
-	background-color: rgb(224, 244, 251);
+	background-color: black;
 	margin-left: 1em;
 	margin-right: 1em;
 	font-size: .75em;
@@ -172,9 +172,9 @@ pre {
 	overflow-x: auto;
 }
 
-code .tag {
+/*code .tag {
 	color: darkblue;
-}
+}*/
 
 
 /* EVERYTHING ELSE */
@@ -235,9 +235,13 @@ body {
 
 
 
+.hljs-rules {
+	color: white;
+}
 
-
-
+pre code {
+	color: lightgrey;
+}
 
 
 

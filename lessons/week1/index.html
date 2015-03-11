@@ -6,6 +6,7 @@
 		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 		<link href="../../css/style.css" rel="stylesheet">
 		<link href="../../css/boxes.css" rel="stylesheet">
+		<link href="../../css/highlight.css" rel="stylesheet">
 		<link rel="icon" href="../../img/favicon.ico">
 		<title>CodeForMBAs - Week 1</title>
 		<style>
@@ -77,19 +78,19 @@
 <p>Content goes between tags like this:</p>
 <p><code><span class="tag">&lt;h1&gt;</span>Section 1<span class="tag">&lt;/h1&gt;</span></code></p>
 <p>Tags can be wrapped inside other tags. A webpage is always wrapped inside an <code><span class="tag">&lt;html&gt;</span></code> tag, which is further divided into two sections: <code><span class="tag">&lt;head&gt;</span></code> and <code><span class="tag">&lt;body&gt;</span></code>. The <code><span class="tag">&lt;head&gt;</span></code> section contains metadata about the webpage. The <code><span class="tag">&lt;body&gt;</span></code> section contains the actual content which is displayed to the user. Here is an example of a complete HTML webpage:</p>
-<pre><code><span class="tag">&lt;html&gt;</span>
+<pre><code><span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">html</span>&gt;</span></span>
 
-  <span class="tag">&lt;head&gt;</span>
-      <span class="tag">&lt;title&gt;</span>Example Webpage<span class="tag">&lt;/title&gt;</span>
-  <span class="tag">&lt;/head&gt;</span>
+  <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">head</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">title</span>&gt;</span></span>Example Webpage<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">title</span>&gt;</span></span>
+  <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">head</span>&gt;</span></span>
 
-  <span class="tag">&lt;body&gt;</span>
-      <span class="tag">&lt;h1&gt;</span>The Best Webpage Ever<span class="tag">&lt;/h1&gt;</span>
-      <span class="tag">&lt;p&gt;</span>This is the first paragraph of the best webpage ever. It is amazing.<span class="tag">&lt;/p&gt;</span>
-      <span class="tag">&lt;p&gt;</span>This is the second paragraph of the best webpage ever. It is even more amazing.<span class="tag">&lt;/p&gt;</span>
-  <span class="tag">&lt;/body&gt;</span>
+  <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">body</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">h1</span>&gt;</span></span>The Best Webpage Ever<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">h1</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">p</span>&gt;</span></span>This is the first paragraph of the best webpage ever. It is amazing.<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">p</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">p</span>&gt;</span></span>This is the second paragraph of the best webpage ever. It is even more amazing.<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">p</span>&gt;</span></span>
+  <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">body</span>&gt;</span></span>
 
-<span class="tag">&lt;/html&gt;</span>
+<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">html</span>&gt;</span></span>
 </code></pre><p>Notice the use of <strong>line breaks</strong> and <strong>tab spaces</strong> to keep the HTML clean and readable. <a href="examples/best.html" title="Link to the Best Webpage Ever">In a web browser</a> this webpage would look like:</p>
 <p><a href="examples/best.html"><img src="img/firefox.png" alt="A picture of the browser with the simple HTML webpage." title="The best webpage ever"></a></p>
 <p>Looking at the webpage we can already notice a few things. First, the text contained in the <code><span class="tag">&lt;h1&gt;</span></code> tag is given a different style than the text contained in the <code><span class="tag">&lt;p&gt;</span></code> tags. This is because the <code><span class="tag">&lt;h1&gt;</span></code> tag represents a header while the <code><span class="tag">&lt;p&gt;</span></code> tags represent paragraphs. Second, as you might expect, the browser has automatically inserted spaces between the header and the paragraphs.</p>
@@ -102,37 +103,37 @@
 <p>We have already looked at simple HTML documents using simple elements, such as the header (<code><span class="tag">&lt;h1&gt;</span></code>) and the paragraph (<code><span class="tag">&lt;p&gt;</span></code>). Now we are going to look at a more complicated element, the link.</p>
 <h2 id="the-link">The Link</h2>
 <p>Links are done in HTML using the <code><span class="tag">&lt;a&gt;</span></code> tag. An example of a simple link is:</p>
-<pre><code>&lt;a href=&quot;http://www.google.com/&quot;&gt;Google Homepage<span class="tag">&lt;/a&gt;</span>
+<pre><code><span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.google.com/"</span>&gt;</span></span>Google Homepage<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">a</span>&gt;</span></span>
 </code></pre><p>Notice that now there is content between the opening <code><span class="tag">&lt;a</code> and closing <code>&gt;</span></code> of the opening tag. This content, <code>href=&quot;http://www.google.com/&quot;</code>, provides the actual URL (or <em>Hypertext Reference</em>, i.e. HREF) for the link. <a href="examples/link.html">In a browser</a> this HTML tag would appear as follows:</p>
 <p><a href="examples/link.html"><img src="img/link.png" alt="A link tag in the browser" title="Link Tag"></a></p>
 <h2 id="the-list">The List</h2>
 <p>Another useful HTML element is the list. Lists use two elements: <code><span class="tag">&lt;ul&gt;</span></code> (<em>unordered list</em>) to represent the list itself, and <code><span class="tag">&lt;li&gt;</span></code> to represent each item on the list. A simple example of a list is as follows:</p>
-<pre><code><span class="tag">&lt;ul&gt;</span>
-  <span class="tag">&lt;li&gt;</span>Item 1<span class="tag">&lt;/li&gt;</span>
-  <span class="tag">&lt;li&gt;</span>Item 2<span class="tag">&lt;/li&gt;</span>
-  <span class="tag">&lt;li&gt;</span>Item 3<span class="tag">&lt;/li&gt;</span>
-<span class="tag">&lt;/ul&gt;</span>
+<pre><code><span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">ul</span>&gt;</span></span>
+  <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">li</span>&gt;</span></span>Item 1<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">li</span>&gt;</span></span>
+  <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">li</span>&gt;</span></span>Item 2<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">li</span>&gt;</span></span>
+  <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">li</span>&gt;</span></span>Item 3<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">li</span>&gt;</span></span>
+<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></span>
 </code></pre><p>Again note the use of indenting for code clarity. <a href="examples/list.html">In a browser</a> this list would appear as follows:</p>
 <p><a href="examples/list.html"><img src="img/list.png" alt="A list tag in the browser" title="List Tag"></a></p>
 <h2 id="all-together-now">All Together Now</h2>
 <p>Let&#39;s now combine lists and links, as well as the <code><span class="tag">&lt;html&gt;</span></code>, <code><span class="tag">&lt;head&gt;</span></code>, and <code><span class="tag">&lt;body&gt;</span></code> tags, to make a complete webpage.</p>
-<pre><code><span class="tag">&lt;html&gt;</span>
+<pre><code><span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">html</span>&gt;</span></span>
 
-  <span class="tag">&lt;head&gt;</span>
-    <span class="tag">&lt;title&gt;</span>MBA Programs in Europe<span class="tag">&lt;/title&gt;</span>
-  <span class="tag">&lt;/head&gt;</span>
+  <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">head</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">title</span>&gt;</span></span>MBA Programs in Europe<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">title</span>&gt;</span></span>
+  <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">head</span>&gt;</span></span>
 
-  <span class="tag">&lt;body&gt;</span>
-    <span class="tag">&lt;h1&gt;</span>A Selection of European MBA Programs<span class="tag">&lt;/h1&gt;</span>
-    <span class="tag">&lt;ul&gt;</span>
-      <span class="tag">&lt;li&gt;</span>&lt;a href=&quot;http://www.sbs.ox.ac.uk/&quot;&gt;Said Business School<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
-      <span class="tag">&lt;li&gt;</span>&lt;a href=&quot;http://www.insead.edu/home/&quot;&gt;Insead<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
-      <span class="tag">&lt;li&gt;</span>&lt;a href=&quot;http://www.hec.edu/&quot;&gt;HEC Paris<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
-      <span class="tag">&lt;li&gt;</span>&lt;a href=&quot;http://www.esade.edu/web/eng&quot;&gt;ESADE<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
-    <span class="tag">&lt;/ul&gt;</span>
-  <span class="tag">&lt;/body&gt;</span>
+  <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">body</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">h1</span>&gt;</span></span>A Selection of European MBA Programs<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">h1</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">ul</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">li</span>&gt;</span></span><span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.sbs.ox.ac.uk/"</span>&gt;</span></span>Said Business School<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">a</span>&gt;</span></span><span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">li</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">li</span>&gt;</span></span><span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.insead.edu/home/"</span>&gt;</span></span>Insead<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">a</span>&gt;</span></span><span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">li</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">li</span>&gt;</span></span><span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.hec.edu/"</span>&gt;</span></span>HEC Paris<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">a</span>&gt;</span></span><span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">li</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">li</span>&gt;</span></span><span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.esade.edu/web/eng"</span>&gt;</span></span>ESADE<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">a</span>&gt;</span></span><span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">li</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></span>
+  <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">body</span>&gt;</span></span>
 
-<span class="tag">&lt;/html&gt;</span>
+<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">html</span>&gt;</span></span>
 </code></pre><p><a href="examples/bschools.html">In the browser</a>, this webpage will look as follows:</p>
 <p><a href="examples/bschools.html"><img src="img/bschools.png" alt="Business Schools in Europe" title="Business Schools in Europe"></a></p>
 
@@ -206,6 +207,7 @@
 		<script src="../../js/jquery-visible.min.js"></script>
 		<script src="../../js/main.js"></script>
 		<script src="../../js/squares.js"></script>
+		<script src="../../js/highlight.js"></script>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
