@@ -11,7 +11,7 @@ By now I suspect you're getting the hang of things, so we're going to introduce/
 
       <body>
 
-  	    <h1>The Amazing Adding Machine</h1>
+        <h1>The Amazing Adding Machine</h1>
 
         <label>Number 1: </label><input type="number" id="firstNumber">
         <label>Number 2: </label><input type="number" id="secondNumber">
