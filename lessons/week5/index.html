@@ -1,0 +1,250 @@
+
+<!--Don't edit this version!-->
+
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<link href="../../css/style.css" rel="stylesheet">
+		<link href="../../css/boxes.css" rel="stylesheet">
+		<link href="../../css/highlight.css" rel="stylesheet">
+		<link rel="icon" href="../../img/favicon.ico">
+		<title>CodeForMBAs - Week 5</title>
+		<style>
+/*			#box1 {		
+				background-color: green;
+				border-color: blue;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="sidebar">
+				<div class="sidebar-container">
+					<a class="link-home" href="../..">home</a>
+					<h1>Week 5</h1>
+					<nav>
+						<ul id="links">
+							
+							
+								<li><a href="#introduction">Introduction</a></li>
+							
+								<li><a href="#technical-debt">Technical Debt</a></li>
+							
+								<li><a href="#exercise1">Exercise 1</a></li>
+							
+								<li><a href="#postscript">Post-Script</a></li>
+							
+
+						</ul>
+					</nav>
+
+				</div>
+			</div>
+			<div class="main">
+				<div class="article-wrap">
+					<article class="content">
+						
+							<section id="introduction">
+<h1 id="introduction">Introduction</h1>
+<p>The code-base for a mature software product can extend to contain thousands, hundreds of thousands, or even millions of lines of code. In a good project the majority of this code will be well-structured and thoughtfully designed. However, as with any real-world project, real-world situations often require people to cut corners. &quot;Technical Debt&quot;, an analogy commonly used to discuss the consequences of this corner-cutting, is our topic for this week.</p>
+
+</section>
+						
+							<section id="technical-debt">
+<h1 id="technical-debt">Technical Debt</h1>
+<h2 id="an-example">An Example</h2>
+<p>Let&#39;s take an extremely simple example to illustrate the concept of technical debt. Imagine that you are making a blog website for a client. You have the following layout:</p>
+<pre><code><span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">html</span>&gt;</span></span>
+
+  <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">head</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">title</span>&gt;</span></span>Blog!<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">title</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"css/style.css"</span>&gt;</span></span>
+  <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">head</span>&gt;</span></span>
+
+  <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">body</span>&gt;</span></span>
+
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">header</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">h1</span>&gt;</span></span>Web Developer Weekly<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">h1</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">header</span>&gt;</span></span>
+
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">article</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">h2</span>&gt;</span></span>Hastle Free HTML<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">h2</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">p</span>&gt;</span></span>by Joan<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">p</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">p</span>&gt;</span></span>Article text...<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">p</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">article</span>&gt;</span></span>
+
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">article</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">h2</span>&gt;</span></span>Seamless Stylesheets<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">h2</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">p</span>&gt;</span></span>by Huan<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">p</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">p</span>&gt;</span></span>Article text...<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">p</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">article</span>&gt;</span></span>
+
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">footer</span>&gt;</span></span>
+        <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">p</span>&gt;</span></span><span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">em</span>&gt;</span></span>(c) Anne's Awesome Blogs, 2015<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">em</span>&gt;</span></span><span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">p</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">footer</span>&gt;</span></span>
+
+  <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">body</span>&gt;</span></span>
+
+<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">html</span>&gt;</span></span>
+</code></pre><p>Ok, looks great so far. Now imagine you get a desparate call from the client: &quot;We <strong>need</strong> the by-line to be italicized&quot;. You could simply add <code>p {font-style: italic;}</code> to your CSS file, but then the article text would become italicized as well. You need to do something a little more clever, but the client is phoning you every 5 minutes and you don&#39;t have time to think. Luckily you remember that the default style for <code><span class="tag">&lt;em&gt;</span></code> (emphasis) tags is italic font so you realize you can simply quickly edit the HTML and add some <code><span class="tag">&lt;em&gt;</span></code> tags:</p>
+<pre><code><span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">html</span>&gt;</span></span>
+
+  <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">head</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">title</span>&gt;</span></span>Blog!<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">title</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"css/style.css"</span>&gt;</span></span>
+  <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">head</span>&gt;</span></span>
+
+  <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">body</span>&gt;</span></span>
+
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">header</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">h1</span>&gt;</span></span>Web Developer Weekly<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">h1</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">header</span>&gt;</span></span>
+
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">article</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">h2</span>&gt;</span></span>Hastle Free HTML<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">h2</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">p</span>&gt;</span></span><span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">em</span>&gt;</span></span>by Joan<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">em</span>&gt;</span></span><span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">p</span>&gt;</span></span> <span class="hljs-comment"><span class="tag">&lt;!-- em tag added --&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">p</span>&gt;</span></span>Article text...<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">p</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">article</span>&gt;</span></span>
+
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">article</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">h2</span>&gt;</span></span>Seamless Stylesheets<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">h2</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">p</span>&gt;</span></span><span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">em</span>&gt;</span></span>by Huan<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">em</span>&gt;</span></span><span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">p</span>&gt;</span></span> <span class="hljs-comment"><span class="tag">&lt;!-- em tag added --&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">p</span>&gt;</span></span>Article text...<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">p</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">article</span>&gt;</span></span>
+
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">footer</span>&gt;</span></span>
+        <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">p</span>&gt;</span></span><span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">em</span>&gt;</span></span>(c) Anne's Awesome Blogs, 2015<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">em</span>&gt;</span></span><span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">p</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">footer</span>&gt;</span></span>
+
+  <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">body</span>&gt;</span></span>
+
+<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">html</span>&gt;</span></span>
+</code></pre><p>Phew, great. Done. Now the client comes to you, however, and says that the by-line also needs to be written in blue text. This is a trickier problem, because if you add <code>em {color: blue}</code> to your stylesheet that will also affect the <code><span class="tag">&lt;em&gt;</span></code> tag in the footer. Luckily two weeks ago you became a master of CSS selectors, so you add this beauty to your CSS file:</p>
+<pre><code><span class="hljs-tag">body</span> <span class="hljs-tag">article</span> <span class="hljs-tag">p</span> <span class="hljs-tag">em</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> blue</span></span>;
+<span class="hljs-rule">}</span></span>
+</code></pre><p>It works but it&#39;s getting ugly. Your CSS file is getting bloated and your HTML file has a few more <code><span class="tag">&lt;em&gt;</span></code> tags in it than it did when you were first sipping your coffee this morning. If you replicate this process every time the client requests a change, soon enough you&#39;ll have a bloated, messy, tangled codebase that even you, with your weeks and weeks of web development training, can&#39;t really understand. Not good.</p>
+<p>A simple solution at this point is to &quot;refactor&quot; (edit a code&#39;s implementation without changing its behaviour) and add a class to the by-line paragraph. The resulting HTML is this:</p>
+<pre><code><span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">html</span>&gt;</span></span>
+
+  <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">head</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">title</span>&gt;</span></span>Blog!<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">title</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"css/style.css"</span>&gt;</span></span>
+  <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">head</span>&gt;</span></span>
+
+  <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">body</span>&gt;</span></span>
+
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">header</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">h1</span>&gt;</span></span>Web Developer Weekly<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">h1</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">header</span>&gt;</span></span>
+
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">article</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">h2</span>&gt;</span></span>Hastle Free HTML<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">h2</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"by-line"</span>&gt;</span></span>by Joan<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">p</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">p</span>&gt;</span></span>Article text...<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">p</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">article</span>&gt;</span></span>
+
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">article</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">h2</span>&gt;</span></span>Seamless Stylesheets<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">h2</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"by-line"</span>&gt;</span></span>by Huan<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">p</span>&gt;</span></span>
+      <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">p</span>&gt;</span></span>Article text...<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">p</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">article</span>&gt;</span></span>
+
+    <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">footer</span>&gt;</span></span>
+        <span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">p</span>&gt;</span></span><span class="hljs-tag"><span class="tag">&lt;<span class="hljs-title">em</span>&gt;</span></span>(c) Anne's Awesome Blogs, 2015<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">em</span>&gt;</span></span><span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">p</span>&gt;</span></span>
+    <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">footer</span>&gt;</span></span>
+
+  <span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">body</span>&gt;</span></span>
+
+<span class="hljs-tag"><span class="tag">&lt;/<span class="hljs-title">html</span>&gt;</span></span>
+</code></pre><p>Right away our HTML is cleaner. We&#39;ve gotten rid of two sets of <code><span class="tag">&lt;em&gt;</span></code> tags and provided a meaningful class name to our by-line paragraph. Our CSS can now be simplified to this:</p>
+<pre><code><span class="hljs-class">.by-line</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">font-style</span>:<span class="hljs-value"> italic</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> blue</span></span>;
+<span class="hljs-rule">}</span></span>
+</code></pre><p>This is also beneficial because all future changes to the by-line can be made in one place.</p>
+<h2 id="the-technical-debt-analogy">The &quot;Technical Debt&quot; Analogy</h2>
+<p>The concept above is simple. When the client asked for the changes to the appearance of the by-line, we needed to move quickly. First we cluttered up our HTML with a few <code><span class="tag">&lt;em&gt;</span></code> tags, and then we added a really complicated CSS selector (<code>body article p em</code>) to specifically target our by-lines. This was justified in the moment, because it helped deliver needed changes to a client, but ultimately it made our codebase harder to manage. The act of intentionally implementing bad code in order to meet some pressing external need is usually referred to as &quot;incurring technical debt&quot;.</p>
+<p>By removing the <code><span class="tag">&lt;em&gt;</span></code> tags and the <code>body article p em</code> selector, and replacing them with the <code>.by-line</code> class we were able to pay back some technical debt. We improved the internal implementation of our project, without affecting the external appearance of the website. This kind of work is extremely important, but its significance is often missed by non-technical managers.</p>
+<p>The moral of the story? Don&#39;t let your project drown in technical debt, no matter how painful it is to invest time in fixing code without changing the appearance of functionality if your app. If you don&#39;t pay back debt from time to time, it will bankrupt you, just like financial debt.</p>
+
+</section>
+						
+							<section id="refactoring">
+<p>Refactoring</p>
+<p>Refactoring code means improving the quality of the code&#39;s implementation without altering its function. In the context of CSS this could mean shortening a CSS file and making its structure more clear, without actually altering the appearance of the webpage. Refactoring is one of the most undervalued parts of software engineering, from the perspective of non-technical managers, because even while the work is important, its results are not visible. There are several key principals to refactoring:</p>
+<h2 id="don-t-repeat-yourself-dry-">Don&#39;t Repeat Yourself (DRY)</h2>
+<p>One of the simplest but most important principles of software engineering is DRY: don&#39;t repeat yourself. It is a critical component of good code design that everything be specified in one place, and one place only. For instance, take the following CSS snippet:</p>
+<pre><code><span class="hljs-tag">p</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">16px</span></span></span>;
+<span class="hljs-rule">}</span></span>
+
+<span class="hljs-tag">p</span><span class="hljs-class">.warning</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> red</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">16px</span></span></span>;
+<span class="hljs-rule">}</span></span>
+</code></pre><p>This seems reasonable. We are saying that a paragraph should have a font-size of 16px and also that when a paragraph has the class <code>.important</code> it should have red text and also a font-size of 16px. However, the second <code>font-size: 16px</code> is redundant. We could accomplish the same thing with the following code:</p>
+<pre><code><span class="hljs-tag">p</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">16px</span></span></span>;
+<span class="hljs-rule">}</span></span>
+
+<span class="hljs-tag">p</span><span class="hljs-class">.warning</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> red</span></span>;
+<span class="hljs-rule">}</span></span>
+</code></pre><p>Now if we need to change the font-size for the paragraphs we only need to make one change instead of two. This makes it easier to maintain our code in the future.</p>
+<h2 id="modularization">Modularization</h2>
+<p>asdf</p>
+<h2 id="testing">Testing</h2>
+<p>asdf</p>
+
+</section>
+						
+							<section id="exercise1">
+<h1 id="exercise-1">Exercise 1</h1>
+<p>Check out the following <a href="examples/" title="Week 5 Exercise 1">website</a>. It&#39;s a simple blog with a very simple layout.</p>
+<p>However now take a look at the <a href="examples/style.css" title="Week 5 Exercise 1 Stylesheet">stylesheet</a>. It&#39;s a bit of a mess! Clearly some technical debt has been incurred.</p>
+<p><strong>Your Mission:</strong> Download the example website <a href="examples/w5e1.zip" title="Week 5 Exercise 1 .zip file">here</a> and edit the CSS file. Your goal is to minimize the number of lines of CSS without changing <strong>anything</strong> about the site&#39;s appearance. Be careful about how it looks on a mobile phone (or in a narrow browser window) as well!</p>
+<p>One note. At our company, we have strict style guides for CSS. Good CSS must look like this:</p>
+<pre><code><span class="hljs-class">.by-line</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">font-style</span>:<span class="hljs-value"> italic</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">14px</span></span></span>;
+<span class="hljs-rule">}</span></span>
+</code></pre><p>This style-guide is very stricly enforced. Therefore, even in your quest to minimize the number of lines of CSS, don&#39;t even think about doing something like this:</p>
+<pre><code><span class="hljs-class">.by-line</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">font-style</span>:<span class="hljs-value"> italic</span></span>; <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">14px</span></span></span>; <span class="hljs-rule">}</span></span>
+</code></pre><p>You certainly won&#39;t gain any points, and your co-workers will not be happy. Any badly formatted CSS will be properly reformated before lines are counted...</p>
+<p>When you&#39;re done, email your result to owen.scott@sbs.ox.ac.uk to see who managed to get the shortest file!</p>
+
+</section>
+						
+							<section id="postscript">
+<h1 id="post-script">Post-Script</h1>
+<p><img src="img/good_code.png" alt="Good Code" title="Good Code"></p>
+
+</section>
+						
+					</article>
+				</div>
+			<!-- 	<footer class="site-footer">
+					<p>(c) Owen Scott 2015. Theme is based completely derivatively from the (MIT Licensed) <a href="https://github.com/shashankmehta/greyshade">Greyshade Theme.</a> This page also MIT licensed.</p>
+				</footer>
+ -->
+			</div>
+		</div>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/scrollspy.js"></script>
+		<script src="../../js/jquery-visible.min.js"></script>
+		<script src="../../js/main.js"></script>
+		<script src="../../js/squares.js"></script>
+		<script src="../../js/highlight.js"></script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-60113108-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+	</body>
+</html>

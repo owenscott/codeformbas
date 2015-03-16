@@ -1,0 +1,61 @@
+body {
+	font-size: 16px;
+	font-family: Cambria;
+	background-color: lightblue;
+	padding: 20px;
+}
+
+header {
+	margin-bottom: 30px;
+}
+
+h1, h2 {
+	font-family: Helvetica;
+}
+
+h2 {
+	color: #006;
+	margin-bottom: 5px;
+}
+
+article {
+	margin-bottom: 50px;
+}
+
+body p {
+	text-align: justify;
+}
+
+.by-line {
+	font-style: italic;
+	font-size: 14px;
+}
+
+.container {
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	padding: 30px;
+	border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+
+	body {
+		padding: 5px;
+	}
+
+	.container {
+		padding: 20px;
+	}
+
+	h1 {
+		font-size: 24px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+	
+}

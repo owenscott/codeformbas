@@ -1,0 +1,3 @@
+# Introduction
+
+The code-base for a mature software product can extend to contain thousands, hundreds of thousands, or even millions of lines of code. In a good project the majority of this code will be well-structured and thoughtfully designed. However, as with any real-world project, real-world situations often require people to cut corners. "Technical Debt", an analogy commonly used to discuss the consequences of this corner-cutting, is our topic for this week.
